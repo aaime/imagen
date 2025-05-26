@@ -11,11 +11,11 @@
   <packaging>jar</packaging>
   <name>${project.groupId}:${project.artifactId}</name>
   <dependencies>
-      <dependency>
-        <groupId>org.eclipse.imagen</groupId>
-        <artifactId>imagen-core</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+    <dependency>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>imagen-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
@@ -27,6 +27,10 @@
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.media</groupId>
+      <artifactId>jai_imageio</artifactId>
     </dependency>
   </dependencies>
 </project>

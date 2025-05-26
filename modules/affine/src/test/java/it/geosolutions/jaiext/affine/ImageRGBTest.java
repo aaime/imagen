@@ -17,11 +17,13 @@
 */
 package it.geosolutions.jaiext.affine;
 
+import static it.geosolutions.jaiext.testclasses.TestBase.InterpolationType.BICUBIC_INTERP;
+import static it.geosolutions.jaiext.testclasses.TestBase.InterpolationType.BILINEAR_INTERP;
+import static it.geosolutions.jaiext.testclasses.TestBase.InterpolationType.NEAREST_INTERP;
+import static it.geosolutions.jaiext.testclasses.TestBase.ScaleType.MAGNIFY;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import com.sun.media.imageioimpl.plugins.tiff.TIFFImageReader;
-import com.sun.media.imageioimpl.plugins.tiff.TIFFImageReaderSpi;
 import it.geosolutions.jaiext.testclasses.TestData;
 import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
@@ -31,9 +33,8 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.stream.FileImageInputStream;
+import javax.imageio.ImageIO;
 import org.eclipse.imagen.BorderExtender;
 import org.eclipse.imagen.Interpolation;
 import org.eclipse.imagen.JAI;
@@ -63,116 +64,80 @@ public class ImageRGBTest extends TestAffine {
     private Logger logger = Logger.getLogger(ImageRGBTest.class.getName());
 
     @Test
-    public void testInterpolation() {
+    public void testInterpolation() throws IOException {
 
         boolean bicubic2Disabled = true;
         boolean useROIAccessor = true;
         boolean roiUsed = true;
         boolean setDestinationNoData = true;
 
-        TIFFImageReader reader = null;
+        File inputFile = TestData.file(this, "testImageLittle.tif");
+        RenderedImage image = ImageIO.read(inputFile);
 
-        FileImageInputStream stream_in = null;
+        imageWidth = image.getWidth();
+        imageHeigth = image.getHeight();
 
-        try {
+        int dataType = image.getSampleModel().getDataType();
 
-            // Instantiation of the file-reader
-            reader = (TIFFImageReader) new TIFFImageReaderSpi().createReaderInstance();
+        testImage(
+                image,
+                useROIAccessor,
+                roiUsed,
+                bicubic2Disabled,
+                setDestinationNoData,
+                dataType,
+                NEAREST_INTERP,
+                MAGNIFY);
 
-            // File inputFile = new
-            // File("../jt-utilities/src/test/resources/it/geosolutions/jaiext/images/testImageLittle.tif");
-            File inputFile = TestData.file(this, "testImageLittle.tif");
-            // Instantiation of the imageinputstream and imageoutputstrem
-            stream_in = new FileImageInputStream(inputFile);
+        testImage(
+                image,
+                useROIAccessor,
+                roiUsed,
+                bicubic2Disabled,
+                setDestinationNoData,
+                dataType,
+                BILINEAR_INTERP,
+                MAGNIFY);
 
-            // Setting the inputstream to the reader
-            reader.setInput(stream_in);
-            // Creation of a Renderedimage to store the image
-            RenderedImage image = reader.readAsRenderedImage(0, null);
+        testImage(
+                image,
+                useROIAccessor,
+                roiUsed,
+                bicubic2Disabled,
+                setDestinationNoData,
+                dataType,
+                BICUBIC_INTERP,
+                MAGNIFY);
 
-            imageWidth = image.getWidth();
-            imageHeigth = image.getHeight();
+        testImage(
+                image,
+                useROIAccessor,
+                roiUsed,
+                bicubic2Disabled,
+                setDestinationNoData,
+                dataType,
+                NEAREST_INTERP,
+                ScaleType.REDUCTION);
 
-            int dataType = image.getSampleModel().getDataType();
+        testImage(
+                image,
+                useROIAccessor,
+                roiUsed,
+                bicubic2Disabled,
+                setDestinationNoData,
+                dataType,
+                BILINEAR_INTERP,
+                ScaleType.REDUCTION);
 
-            testImage(
-                    image,
-                    useROIAccessor,
-                    roiUsed,
-                    bicubic2Disabled,
-                    setDestinationNoData,
-                    dataType,
-                    InterpolationType.NEAREST_INTERP,
-                    ScaleType.MAGNIFY);
-
-            testImage(
-                    image,
-                    useROIAccessor,
-                    roiUsed,
-                    bicubic2Disabled,
-                    setDestinationNoData,
-                    dataType,
-                    InterpolationType.BILINEAR_INTERP,
-                    ScaleType.MAGNIFY);
-
-            testImage(
-                    image,
-                    useROIAccessor,
-                    roiUsed,
-                    bicubic2Disabled,
-                    setDestinationNoData,
-                    dataType,
-                    InterpolationType.BICUBIC_INTERP,
-                    ScaleType.MAGNIFY);
-
-            testImage(
-                    image,
-                    useROIAccessor,
-                    roiUsed,
-                    bicubic2Disabled,
-                    setDestinationNoData,
-                    dataType,
-                    InterpolationType.NEAREST_INTERP,
-                    ScaleType.REDUCTION);
-
-            testImage(
-                    image,
-                    useROIAccessor,
-                    roiUsed,
-                    bicubic2Disabled,
-                    setDestinationNoData,
-                    dataType,
-                    InterpolationType.BILINEAR_INTERP,
-                    ScaleType.REDUCTION);
-
-            testImage(
-                    image,
-                    useROIAccessor,
-                    roiUsed,
-                    bicubic2Disabled,
-                    setDestinationNoData,
-                    dataType,
-                    InterpolationType.BICUBIC_INTERP,
-                    ScaleType.REDUCTION);
-
-        } catch (IOException e) {
-            logger.log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.dispose();
-                }
-            } catch (Exception e) {
-            }
-
-            try {
-                if (stream_in != null) {
-                    stream_in.flush();
-                    stream_in.close();
-                }
-            } catch (Exception e) {
-            }
-        }
+        testImage(
+                image,
+                useROIAccessor,
+                roiUsed,
+                bicubic2Disabled,
+                setDestinationNoData,
+                dataType,
+                BICUBIC_INTERP,
+                ScaleType.REDUCTION);
     }
 
     protected ROIShape roiCreation() {

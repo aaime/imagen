@@ -17,9 +17,6 @@
 */
 package it.geosolutions.concurrencytest;
 
-import com.sun.media.imageio.plugins.tiff.TIFFImageReadParam;
-import com.sun.media.imageioimpl.plugins.tiff.TIFFImageReader;
-import com.sun.media.imageioimpl.plugins.tiff.TIFFImageReaderSpi;
 import it.geosolutions.concurrent.ConcurrentTileCache;
 import it.geosolutions.concurrent.ConcurrentTileCacheMultiMap;
 import java.awt.image.RenderedImage;
@@ -34,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.stream.FileImageInputStream;
+import javax.imageio.ImageIO;
 import org.eclipse.imagen.InterpolationNearest;
 import org.eclipse.imagen.JAI;
 import org.eclipse.imagen.TileCache;
@@ -170,122 +167,86 @@ public class ConcurrentCacheTest {
         // Thoughput array index
         int index = 0;
 
-        TIFFImageReader reader = null;
-        final TIFFImageReadParam param;
-        FileImageInputStream stream_in = null;
+        if (path != null) {
+            final File inputFile = new File(path);
+            image = ImageIO.read(inputFile);
+        } else {
+            image = img;
+        }
 
-        try {
+        // image elaboration
+        image = ScaleDescriptor.create(
+                image,
+                Float.valueOf(2.0f),
+                Float.valueOf(2.0f),
+                Float.valueOf(0.0f),
+                Float.valueOf(0.0f),
+                new InterpolationNearest(),
+                null);
 
-            if (path != null) {
-                // Instantiation of the file-reader
-                reader = (TIFFImageReader) new TIFFImageReaderSpi().createReaderInstance();
-                // Instantiation of the read-params
-                param = new TIFFImageReadParam();
-                final File inputFile = new File(path);
-                // Instantiation of the imageinputstream and imageoutputstrem
-                stream_in = new FileImageInputStream(inputFile);
+        image_ = ScaleDescriptor.create(
+                image,
+                Float.valueOf(3.5f),
+                Float.valueOf(3.5f),
+                Float.valueOf(0.0f),
+                Float.valueOf(0.0f),
+                new InterpolationNearest(),
+                null);
 
-                reader.setInput(stream_in);
-                // Rendered image to store the image
-                image = reader.readAsRenderedImage(0, param);
+        // Saving of the tiles maximum and minimun index
+        minTileX = image_.getMinTileX();
+        minTileY = image_.getMinTileY();
+        maxTileX = minTileX + image_.getNumXTiles();
+        maxTileY = minTileY + image_.getNumYTiles();
+
+        for (int s = 1; s <= threadMaxNumber; s = s * 2) {
+            // latch for wait the completion of all threads
+            latch = new CountDownLatch(s);
+            // setting of the maximum number of request to do
+            if (s <= 4) {
+
+                // at the first run one starting thread performs 1000 request
+                // allowing the hotspot
+                // to compile the thread instructions
+
+                if (s == 1) {
+                    latch = new CountDownLatch(2);
+                    maxRequestPerThread = STARTING_REQUEST_PER_FIRST_THREAD;
+                    Worker firstThread = new Worker(multipleOperations);
+                    WeigherPeriodic secondThread = new WeigherPeriodic(cacheUsed);
+                    pool.execute(firstThread);
+                    pool.execute(secondThread);
+                    latch.await();
+                    LOGGER.log(Level.INFO, "Starting Thread Executed");
+                    latch = new CountDownLatch(s);
+                }
+
+                maxRequestPerThread = DEFAULT_MAX_REQUEST_PER_THREAD;
             } else {
-                image = img;
+                // the total request number can grow until 400 then doesn't
+                // change
+                maxRequestPerThread = 4 * DEFAULT_MAX_REQUEST_PER_THREAD / s;
+                // maxRequestPerThread = DEFAULT_MAX_REQUEST_PER_THREAD;
             }
 
-            // image elaboration
-            image = ScaleDescriptor.create(
-                    image,
-                    Float.valueOf(2.0f),
-                    Float.valueOf(2.0f),
-                    Float.valueOf(0.0f),
-                    Float.valueOf(0.0f),
-                    new InterpolationNearest(),
-                    null);
-
-            image_ = ScaleDescriptor.create(
-                    image,
-                    Float.valueOf(3.5f),
-                    Float.valueOf(3.5f),
-                    Float.valueOf(0.0f),
-                    Float.valueOf(0.0f),
-                    new InterpolationNearest(),
-                    null);
-
-            // Saving of the tiles maximum and minimun index
-            minTileX = image_.getMinTileX();
-            minTileY = image_.getMinTileY();
-            maxTileX = minTileX + image_.getNumXTiles();
-            maxTileY = minTileY + image_.getNumYTiles();
-
-            for (int s = 1; s <= threadMaxNumber; s = s * 2) {
-                // latch for wait the completion of all threads
-                latch = new CountDownLatch(s);
-                // setting of the maximum number of request to do
-                if (s <= 4) {
-
-                    // at the first run one starting thread performs 1000 request
-                    // allowing the hotspot
-                    // to compile the thread instructions
-
-                    if (s == 1) {
-                        latch = new CountDownLatch(2);
-                        maxRequestPerThread = STARTING_REQUEST_PER_FIRST_THREAD;
-                        Worker firstThread = new Worker(multipleOperations);
-                        WeigherPeriodic secondThread = new WeigherPeriodic(cacheUsed);
-                        pool.execute(firstThread);
-                        pool.execute(secondThread);
-                        latch.await();
-                        LOGGER.log(Level.INFO, "Starting Thread Executed");
-                        latch = new CountDownLatch(s);
-                    }
-
-                    maxRequestPerThread = DEFAULT_MAX_REQUEST_PER_THREAD;
-                } else {
-                    // the total request number can grow until 400 then doesn't
-                    // change
-                    maxRequestPerThread = 4 * DEFAULT_MAX_REQUEST_PER_THREAD / s;
-                    // maxRequestPerThread = DEFAULT_MAX_REQUEST_PER_THREAD;
-                }
-
-                // number of current threads
-                int count = 1;
-                long startTime = System.nanoTime();
-                // generation of the threads
-                while (count <= s) {
-                    // random tile selection
-                    final Worker prefetch = new Worker(multipleOperations);
-                    // retrieving the task to the executor
-                    pool.execute(prefetch);
-                    count++;
-                }
-                latch.await();
-                // the throughput is calculated as number of total request/ total
-                // time(in seconds)
-                double time = (System.nanoTime() - startTime) * (1E-9);
-                througputArray[index] = (maxRequestPerThread * s) / time;
-                LOGGER.log(Level.INFO, "Number of Threads: " + s);
-                index++;
+            // number of current threads
+            int count = 1;
+            long startTime = System.nanoTime();
+            // generation of the threads
+            while (count <= s) {
+                // random tile selection
+                final Worker prefetch = new Worker(multipleOperations);
+                // retrieving the task to the executor
+                pool.execute(prefetch);
+                count++;
             }
-        } finally {
-            /*
-             * All the readers, writers, and stream are closed even if the program throws an exception
-             */
-            try {
-                if (stream_in != null) {
-                    stream_in.flush();
-                    stream_in.close();
-                }
-            } catch (Throwable t) {
-                //
-            }
-
-            try {
-                if (reader != null) {
-                    reader.dispose();
-                }
-            } catch (Throwable t) {
-                //
-            }
+            latch.await();
+            // the throughput is calculated as number of total request/ total
+            // time(in seconds)
+            double time = (System.nanoTime() - startTime) * (1E-9);
+            througputArray[index] = (maxRequestPerThread * s) / time;
+            LOGGER.log(Level.INFO, "Number of Threads: " + s);
+            index++;
         }
 
         // executor termination
