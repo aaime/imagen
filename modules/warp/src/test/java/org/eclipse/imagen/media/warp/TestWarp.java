@@ -22,7 +22,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
@@ -47,6 +46,7 @@ import org.eclipse.imagen.media.stats.Statistics;
 import org.eclipse.imagen.media.stats.Statistics.StatsType;
 import org.eclipse.imagen.media.stats.StatisticsDescriptor;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 
 /**
  * Test class which extends the jt-utilities TestBase class and provide utility methods for testing the various classes.

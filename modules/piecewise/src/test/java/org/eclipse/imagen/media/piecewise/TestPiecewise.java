@@ -17,7 +17,6 @@
 */
 package org.eclipse.imagen.media.piecewise;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
@@ -40,6 +39,7 @@ import org.eclipse.imagen.media.stats.Statistics.StatsType;
 import org.eclipse.imagen.media.stats.StatisticsDescriptor;
 import org.eclipse.imagen.media.testclasses.TestBase;
 import org.eclipse.imagen.media.testclasses.TestData;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.eclipse.imagen.operator.FormatDescriptor;
 import org.junit.BeforeClass;
 import org.junit.Test;

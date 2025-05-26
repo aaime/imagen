@@ -24,7 +24,6 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.*;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
@@ -47,6 +46,7 @@ import org.eclipse.imagen.media.range.NoDataContainer;
 import org.eclipse.imagen.media.range.Range;
 import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 
 /**
  * This test-class is an extension of the TestBase class inside the jt-utilities project. By calling the testGlobal()

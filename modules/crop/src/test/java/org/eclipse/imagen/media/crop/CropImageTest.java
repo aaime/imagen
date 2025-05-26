@@ -19,7 +19,6 @@ package org.eclipse.imagen.media.crop;
 
 import static org.junit.Assert.*;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.image.DataBuffer;
@@ -40,6 +39,7 @@ import org.eclipse.imagen.media.stats.Statistics.StatsType;
 import org.eclipse.imagen.media.stats.StatisticsDescriptor;
 import org.eclipse.imagen.media.testclasses.TestBase;
 import org.eclipse.imagen.media.util.SunTileCache;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.eclipse.imagen.operator.SubtractDescriptor;
 import org.junit.BeforeClass;
 import org.junit.Test;

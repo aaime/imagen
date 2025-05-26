@@ -19,7 +19,6 @@ package org.eclipse.imagen.media.threshold;
 
 import static org.junit.Assert.assertEquals;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
@@ -33,6 +32,7 @@ import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.media.range.Range;
 import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

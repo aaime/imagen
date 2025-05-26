@@ -20,7 +20,6 @@ package org.eclipse.imagen.media.errordiffusion;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.Transparency;
 import java.awt.color.ColorSpace;
@@ -52,6 +51,7 @@ import org.eclipse.imagen.media.stats.Statistics.StatsType;
 import org.eclipse.imagen.media.stats.StatisticsDescriptor;
 import org.eclipse.imagen.media.testclasses.TestBase;
 import org.eclipse.imagen.media.testclasses.TestData;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.Test;
 
 /**

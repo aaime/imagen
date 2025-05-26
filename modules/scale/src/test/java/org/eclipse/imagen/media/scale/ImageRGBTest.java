@@ -24,7 +24,6 @@ import static org.eclipse.imagen.media.testclasses.TestBase.ScaleType.MAGNIFY;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.*;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
@@ -38,6 +37,7 @@ import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.ROIShape;
 import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.media.testclasses.TestData;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.Test;
 
 /**

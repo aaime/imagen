@@ -19,7 +19,6 @@ package org.eclipse.imagen.media.shadedrelief;
 
 import static org.junit.Assert.assertEquals;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.Transparency;
 import java.awt.color.ColorSpace;
@@ -41,6 +40,7 @@ import org.eclipse.imagen.TiledImage;
 import org.eclipse.imagen.media.range.Range;
 import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

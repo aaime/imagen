@@ -22,7 +22,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Color;
 import java.awt.Transparency;
 import java.awt.color.ColorSpace;
@@ -49,6 +48,7 @@ import org.eclipse.imagen.media.piecewise.TransformationException;
 import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
 import org.eclipse.imagen.media.testclasses.TestData;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.Test;
 
 /**

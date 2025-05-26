@@ -20,7 +20,6 @@ package org.eclipse.imagen.media.mosaic;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.awt.image.Raster;
@@ -34,6 +33,7 @@ import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.media.range.Range;
 import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.eclipse.imagen.operator.NullDescriptor;
 import org.eclipse.imagen.operator.TranslateDescriptor;
 import org.junit.Test;

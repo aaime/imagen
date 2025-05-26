@@ -19,7 +19,6 @@ package org.eclipse.imagen.media.colorconvert;
 
 import static org.junit.Assert.assertEquals;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -48,6 +47,7 @@ import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
 import org.eclipse.imagen.media.testclasses.TestData;
 import org.eclipse.imagen.media.utilities.ImageLayout2;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.Ignore;
 import org.junit.Test;
 

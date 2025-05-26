@@ -17,7 +17,6 @@
 */
 package org.eclipse.imagen.media.buffer;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
@@ -39,6 +38,7 @@ import org.eclipse.imagen.media.stats.Statistics;
 import org.eclipse.imagen.media.stats.Statistics.StatsType;
 import org.eclipse.imagen.media.stats.StatisticsDescriptor;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;

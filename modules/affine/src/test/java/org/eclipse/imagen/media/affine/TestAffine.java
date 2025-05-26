@@ -20,7 +20,6 @@ package org.eclipse.imagen.media.affine;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import it.geosolutions.rendered.viewer.RenderedImageBrowser;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.DataBuffer;
@@ -38,6 +37,7 @@ import org.eclipse.imagen.RenderedOp;
 import org.eclipse.imagen.media.range.Range;
 import org.eclipse.imagen.media.range.RangeFactory;
 import org.eclipse.imagen.media.testclasses.TestBase;
+import org.eclipse.imagen.media.viewer.RenderedImageBrowser;
 
 /**
  * This test-class is an extension of the TestBase class inside the jt-utilities project. By calling the
