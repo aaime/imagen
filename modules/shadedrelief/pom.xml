@@ -4,27 +4,26 @@
 
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
 
-  <groupId>it.geosolutions.jaiext.shadedrelief</groupId>
-  <artifactId>jt-shadedrelief</artifactId>
-  <name>jt-shadedrelief</name>
+  <artifactId>shadedrelief</artifactId>
+  <name>${project.groupId}:${project.artifactId}</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>

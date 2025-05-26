@@ -3,57 +3,56 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
 
-  <groupId>it.geosolutions.jaiext.piecewise</groupId>
-  <artifactId>jt-piecewise</artifactId>
-  <version>1.1.28</version>
-  <name>jt-piecewise</name>
+  <artifactId>piecewise</artifactId>
+
+  <name>${project.groupId}:${project.artifactId}</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.vectorbin</groupId>
-      <artifactId>jt-vectorbin</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>vectorbin</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.bandselect</groupId>
-      <artifactId>jt-bandselect</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>bandselect</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.binarize</groupId>
-      <artifactId>jt-binarize</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>binarize</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.stats</groupId>
-      <artifactId>jt-stats</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>stats</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.algebra</groupId>
-      <artifactId>jt-algebra</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>algebra</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>

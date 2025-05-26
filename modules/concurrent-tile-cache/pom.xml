@@ -3,14 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
 
-  <groupId>it.geosolutions.jaiext.concurrent-tile-cache</groupId>
-  <artifactId>jt-concurrent-tile-cache</artifactId>
+  <artifactId>concurrent-tile-cache</artifactId>
   <packaging>jar</packaging>
-  <name>New tile cache implementation supporting concurrency</name>
+  <name>${project.groupId}:${project.artifactId}</name>
   <dependencies>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -18,8 +17,8 @@
       <version>${guava.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>

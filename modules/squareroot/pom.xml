@@ -3,12 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
 
-  <groupId>it.geosolutions.jaiext.squareroot</groupId>
-  <artifactId>jt-square-root</artifactId>
+  <artifactId>square-root</artifactId>
   <packaging>jar</packaging>
-  <name>Square Root Contrast Enhancement jai operation</name>
+  <name>${project.groupId}:${project.artifactId}</name>
 </project>

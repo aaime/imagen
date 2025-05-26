@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
-  <groupId>it.geosolutions.jaiext.iterators</groupId>
-  <artifactId>jt-iterators</artifactId>
-  <name>jt-iterators</name>
+
+  <artifactId>iterators</artifactId>
+  <name>${project.groupId}:${project.artifactId}</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

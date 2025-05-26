@@ -3,24 +3,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>it.geosolutions.jaiext.jiffle</groupId>
-    <artifactId>jt-jiffle</artifactId>
+    <groupId>org.eclipse.imagen</groupId>
+    <artifactId>jiffle</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
-  <artifactId>jt-jiffle-op</artifactId>
+  <artifactId>jiffle-op</artifactId>
   <packaging>jar</packaging>
-  <name>jt-jiffle-op</name>
+  <name>${project.groupId}:${project.artifactId}</name>
   <description>Runs a Jiffle script as an image operator with deferred execution.</description>
 
   <dependencies>
     <dependency>
-      <groupId>it.geosolutions.jaiext.jiffle</groupId>
-      <artifactId>jt-jiffle-language</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>jiffle-language</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>

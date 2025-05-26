@@ -3,36 +3,34 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
-
-  <groupId>it.geosolutions.jaiext.affine</groupId>
-  <artifactId>jt-affine</artifactId>
-  <name>jt-affine</name>
+  <artifactId>affine</artifactId>
+  <name>${project.groupId}:${project.artifactId}</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>it.geosolutions.jaiext.iterators</groupId>
-      <artifactId>jt-iterators</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>iterators</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.scale</groupId>
-      <artifactId>jt-scale</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>scale</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>

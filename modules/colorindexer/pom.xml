@@ -3,52 +3,51 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
 
-  <groupId>it.geosolutions.jaiext.colorindexer</groupId>
-  <artifactId>jt-colorindexer</artifactId>
-  <version>1.1.28</version>
-  <name>jt-colorindexer</name>
+  <artifactId>colorindexer</artifactId>
+
+  <name>${project.groupId}:${project.artifactId}</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.utilities</groupId>
-      <artifactId>jt-utilities</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>utilities</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.bandmerge</groupId>
-      <artifactId>jt-bandmerge</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>bandmerge</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.bandcombine</groupId>
-      <artifactId>jt-bandcombine</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>bandcombine</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.stats</groupId>
-      <artifactId>jt-stats</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>stats</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>it.geosolutions.jaiext.lookup</groupId>
-      <artifactId>jt-lookup</artifactId>
+      <groupId>org.eclipse.imagen</groupId>
+      <artifactId>lookup</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>

@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.eclipse.imagen</groupId>
-    <artifactId>imagen</artifactId>
+    <artifactId>imagen-modules</artifactId>
     <version>0.4-SNAPSHOT</version>
   </parent>
-  <groupId>it.geosolutions.jaiext.jiffle</groupId>
-  <artifactId>jt-jiffle</artifactId>
+
+  <artifactId>jiffle</artifactId>
   <packaging>pom</packaging>
-  <name>jt-jiffle</name>
+  <name>${project.groupId}:${project.artifactId}</name>
   <description>Jiffle is a scripting language for creating and analysing raster images.</description>
 
   <developers>
