@@ -25,7 +25,6 @@ import java.math.BigInteger;
 import org.eclipse.imagen.CachedTile;
 import org.eclipse.imagen.PlanarImage;
 import org.eclipse.imagen.media.cache.ConcurrentTileCache.Actions;
-import org.eclipse.imagen.remote.SerializableRenderedImage;
 
 /**
  * This class is used by ConcurrentTileCache to create an object that includes all the information associated with a
@@ -113,9 +112,9 @@ public final class CachedTileImpl implements CachedTile {
     public static Object hashKey(RenderedImage owner) {
 
         BigInteger imageID = null;
-        if (owner instanceof PlanarImage) imageID = (BigInteger) ((PlanarImage) owner).getImageID();
-        else if (owner instanceof SerializableRenderedImage)
-            imageID = (BigInteger) ((SerializableRenderedImage) owner).getImageID();
+        if (owner instanceof PlanarImage) {
+            imageID = (BigInteger) ((PlanarImage) owner).getImageID();
+        }
 
         if (imageID != null) {
             byte[] buf = imageID.toByteArray();
