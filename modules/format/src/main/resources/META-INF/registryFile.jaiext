@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.format.FormatDescriptor
+descriptor  org.eclipse.imagen.media.format.FormatDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.format.FormatCRIF  it.geosolutions.jaiext  Format Format 
+rendered  org.eclipse.imagen.media.format.FormatCRIF  org.eclipse.imagen.media  Format Format

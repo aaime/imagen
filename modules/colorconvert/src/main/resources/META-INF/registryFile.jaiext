@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.colorconvert.ColorConvertDescriptor
+descriptor  org.eclipse.imagen.media.colorconvert.ColorConvertDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.colorconvert.ColorConvertCRIF  it.geosolutions.jaiext  ColorConvert ColorConvert
+rendered  org.eclipse.imagen.media.colorconvert.ColorConvertCRIF  org.eclipse.imagen.media  ColorConvert ColorConvert

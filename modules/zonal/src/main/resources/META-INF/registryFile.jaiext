@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.zonal.ZonalStatsDescriptor
+descriptor  org.eclipse.imagen.media.zonal.ZonalStatsDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.zonal.ZonalStatsRIF  it.geosolutions.jaiext  Zonal Zonal 
+rendered  org.eclipse.imagen.media.zonal.ZonalStatsRIF  org.eclipse.imagen.media  Zonal Zonal

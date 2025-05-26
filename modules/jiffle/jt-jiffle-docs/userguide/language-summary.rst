@@ -273,7 +273,7 @@ Maximum loop iterations
 In order to prevent loops from causing excessive resource consumption, Jiffle limits the maximum
 number of loop iterations that will be executed before throwing an exception. This limit is applied
 per pixel so that it is independent of the source image size. The default value is 200 and the
-``it.geosolutions.jaiext.jiffle.maxIterations`` system property can be set to change this limit.
+``org.eclipse.imagen.media.jiffle.maxIterations`` system property can be set to change this limit.
 Setting this property to a negative value will disable this limit.
 
 Functions

@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.stats.StatisticsDescriptor
+descriptor  org.eclipse.imagen.media.stats.StatisticsDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.stats.StatisticsRIF  it.geosolutions.jaiext  Stats Stats 
+rendered  org.eclipse.imagen.media.stats.StatisticsRIF  org.eclipse.imagen.media  Stats Stats

@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.nullop.NullDescriptor
+descriptor  org.eclipse.imagen.media.nullop.NullDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.nullop.NullCRIF  it.geosolutions.jaiext  Null Null 
+rendered  org.eclipse.imagen.media.nullop.NullCRIF  org.eclipse.imagen.media  Null Null

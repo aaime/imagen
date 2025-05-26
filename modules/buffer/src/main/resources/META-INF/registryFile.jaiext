@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.buffer.BufferDescriptor
+descriptor  org.eclipse.imagen.media.buffer.BufferDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.buffer.BufferRIF it.geosolutions.jaiext  Buffer Buffer 
+rendered  org.eclipse.imagen.media.buffer.BufferRIF org.eclipse.imagen.media  Buffer Buffer

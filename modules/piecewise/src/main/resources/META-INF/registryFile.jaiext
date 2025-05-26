@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.piecewise.GenericPiecewiseDescriptor
+descriptor  org.eclipse.imagen.media.piecewise.GenericPiecewiseDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.piecewise.GenericPiecewiseCRIF  it.geosolutions.jaiext  GenericPiecewise GenericPiecewise
+rendered  org.eclipse.imagen.media.piecewise.GenericPiecewiseCRIF  org.eclipse.imagen.media  GenericPiecewise GenericPiecewise

@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.bandmerge.BandMergeDescriptor
+descriptor  org.eclipse.imagen.media.bandmerge.BandMergeDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.bandmerge.BandMergeCRIF  it.geosolutions.jaiext  BandMerge BandMerge 
+rendered  org.eclipse.imagen.media.bandmerge.BandMergeCRIF  org.eclipse.imagen.media  BandMerge BandMerge

@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.classifier.RasterClassifierDescriptor
+descriptor  org.eclipse.imagen.media.classifier.RasterClassifierDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.classifier.RasterClassifierCRIF  it.geosolutions.jaiext  RasterClassifier RasterClassifier
+rendered  org.eclipse.imagen.media.classifier.RasterClassifierCRIF  org.eclipse.imagen.media  RasterClassifier RasterClassifier

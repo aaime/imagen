@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.lookup.LookupDescriptor
+descriptor  org.eclipse.imagen.media.lookup.LookupDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.lookup.LookupCRIF  it.geosolutions.jaiext  Lookup Lookup 
+rendered  org.eclipse.imagen.media.lookup.LookupCRIF  org.eclipse.imagen.media  Lookup Lookup

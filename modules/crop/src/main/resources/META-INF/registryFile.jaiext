@@ -2,10 +2,10 @@
 # Image operation descriptors :
 #
 
-descriptor  it.geosolutions.jaiext.crop.CropDescriptor
+descriptor  org.eclipse.imagen.media.crop.CropDescriptor
 
 
 #
 # "rendered" factory objects
 #
-rendered  it.geosolutions.jaiext.crop.CropCRIF     it.geosolutions.jaiext  Crop   Crop
+rendered  org.eclipse.imagen.media.crop.CropCRIF     org.eclipse.imagen.media  Crop   Crop

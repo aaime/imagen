@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.artifacts.ArtifactsFilterDescriptor
+descriptor  org.eclipse.imagen.media.artifacts.ArtifactsFilterDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.artifacts.ArtifactsFilterRIF  it.geosolutions.jaiext  ArtifactsFilter ArtifactsFilter 
+rendered  org.eclipse.imagen.media.artifacts.ArtifactsFilterRIF  org.eclipse.imagen.media  ArtifactsFilter ArtifactsFilter

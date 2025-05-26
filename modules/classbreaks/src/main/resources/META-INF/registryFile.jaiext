@@ -1,9 +1,9 @@
 #
 # Image descriptors
 #
-descriptor  it.geosolutions.jaiext.classbreaks.ClassBreaksDescriptor
+descriptor  org.eclipse.imagen.media.classbreaks.ClassBreaksDescriptor
 
 #
 # RenderedImageFactories
 #
-rendered  it.geosolutions.jaiext.classbreaks.ClassBreaksRIF  it.geosolutions.jaiext  ClassBreaks  ClassBreaks
+rendered  org.eclipse.imagen.media.classbreaks.ClassBreaksRIF  org.eclipse.imagen.media  ClassBreaks  ClassBreaks

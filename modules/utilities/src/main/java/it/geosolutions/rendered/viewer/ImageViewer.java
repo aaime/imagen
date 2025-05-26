@@ -19,8 +19,6 @@ package it.geosolutions.rendered.viewer;
 
 import static java.awt.image.DataBuffer.*;
 
-import it.geosolutions.jaiext.range.NoDataContainer;
-import it.geosolutions.jaiext.utilities.ImageLayout2;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +38,8 @@ import javax.swing.filechooser.FileFilter;
 import org.eclipse.imagen.*;
 import org.eclipse.imagen.iterator.RandomIter;
 import org.eclipse.imagen.iterator.RandomIterFactory;
+import org.eclipse.imagen.media.range.NoDataContainer;
+import org.eclipse.imagen.media.utilities.ImageLayout2;
 import org.eclipse.imagen.operator.*;
 
 /**

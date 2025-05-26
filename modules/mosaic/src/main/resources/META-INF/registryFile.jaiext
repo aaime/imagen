@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.mosaic.MosaicDescriptor
+descriptor  org.eclipse.imagen.media.mosaic.MosaicDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.mosaic.MosaicRIF  it.geosolutions.jaiext  Mosaic Mosaic 
+rendered  org.eclipse.imagen.media.mosaic.MosaicRIF  org.eclipse.imagen.media  Mosaic Mosaic

@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.threshold.ThresholdDescriptor
+descriptor  org.eclipse.imagen.media.threshold.ThresholdDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.threshold.ThresholdCRIF  it.geosolutions.jaiext  Threshold Threshold 
+rendered  org.eclipse.imagen.media.threshold.ThresholdCRIF  org.eclipse.imagen.media  Threshold Threshold

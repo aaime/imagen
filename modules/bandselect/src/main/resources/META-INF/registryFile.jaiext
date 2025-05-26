@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.bandselect.BandSelectDescriptor
+descriptor  org.eclipse.imagen.media.bandselect.BandSelectDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.bandselect.BandSelectCRIF  it.geosolutions.jaiext  BandSelect BandSelect 
+rendered  org.eclipse.imagen.media.bandselect.BandSelectCRIF  org.eclipse.imagen.media  BandSelect BandSelect

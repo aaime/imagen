@@ -1,10 +1,10 @@
 #
 # Image operation descriptors :
 #
-descriptor  it.geosolutions.jaiext.jiffleop.JiffleDescriptor
+descriptor  org.eclipse.imagen.media.jiffleop.JiffleDescriptor
 
 
 #
 # "rendered" factory objects
 #
-rendered  it.geosolutions.jaiext.jiffleop.JiffleRIF  it.geosolutions.jaiext  Jiffle  Jiffle
+rendered  org.eclipse.imagen.media.jiffleop.JiffleRIF  org.eclipse.imagen.media  Jiffle  Jiffle

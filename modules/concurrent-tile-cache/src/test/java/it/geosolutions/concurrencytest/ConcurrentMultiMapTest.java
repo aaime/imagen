@@ -18,7 +18,6 @@
 package it.geosolutions.concurrencytest;
 
 import it.geosolutions.concurrent.ConcurrentTileCacheMultiMap;
-import it.geosolutions.jaiext.testclasses.TestData;
 import java.awt.image.Raster;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -31,6 +30,7 @@ import javax.imageio.stream.FileImageInputStream;
 import javax.imageio.stream.ImageInputStream;
 import junit.framework.Assert;
 import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.testclasses.TestData;
 import org.junit.Ignore;
 import org.junit.Test;
 

@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.clamp.ClampDescriptor
+descriptor  org.eclipse.imagen.media.clamp.ClampDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.clamp.ClampCRIF  it.geosolutions.jaiext  Clampop Clampop 
+rendered  org.eclipse.imagen.media.clamp.ClampCRIF  org.eclipse.imagen.media  Clampop Clampop

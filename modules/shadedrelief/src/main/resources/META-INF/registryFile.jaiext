@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.shadedrelief.ShadedReliefDescriptor
+descriptor  org.eclipse.imagen.media.shadedrelief.ShadedReliefDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.shadedrelief.ShadedReliefRIF  it.geosolutions.jaiext  ShadedRelief ShadedRelief
+rendered  org.eclipse.imagen.media.shadedrelief.ShadedReliefRIF  org.eclipse.imagen.media  ShadedRelief ShadedRelief

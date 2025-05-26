@@ -1,10 +1,10 @@
 #
 # Image operation descriptors :
 #
-descriptor  it.geosolutions.jaiext.rlookup.RangeLookupDescriptor
+descriptor  org.eclipse.imagen.media.rlookup.RangeLookupDescriptor
 
 
 #
 # "rendered" factory objects
 #
-rendered  it.geosolutions.jaiext.rlookup.RangeLookupRIF  it.geosolutions.jaiext  RLookup  RLookup
+rendered  org.eclipse.imagen.media.rlookup.RangeLookupRIF  org.eclipse.imagen.media  RLookup  RLookup

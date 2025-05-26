@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.orderdither.OrderedDitherDescriptor
+descriptor  org.eclipse.imagen.media.orderdither.OrderedDitherDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.orderdither.OrderedDitherRIF  it.geosolutions.jaiext  OrderedDither OrderedDither
+rendered  org.eclipse.imagen.media.orderdither.OrderedDitherRIF  org.eclipse.imagen.media  OrderedDither OrderedDither

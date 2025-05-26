@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.scale.ScaleDescriptor
+descriptor  org.eclipse.imagen.media.scale.ScaleDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.scale.ScaleCRIF  it.geosolutions.jaiext  Scale Scale 
+rendered  org.eclipse.imagen.media.scale.ScaleCRIF  org.eclipse.imagen.media  Scale Scale

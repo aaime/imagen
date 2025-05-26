@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.errordiffusion.ErrorDiffusionDescriptor
+descriptor  org.eclipse.imagen.media.errordiffusion.ErrorDiffusionDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.errordiffusion.ErrorDiffusionRIF  it.geosolutions.jaiext  ErrorDiffusion ErrorDiffusion
+rendered  org.eclipse.imagen.media.errordiffusion.ErrorDiffusionRIF  org.eclipse.imagen.media  ErrorDiffusion ErrorDiffusion

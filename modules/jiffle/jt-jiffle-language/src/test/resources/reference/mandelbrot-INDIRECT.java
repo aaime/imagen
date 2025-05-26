@@ -1,10 +1,10 @@
-package it.geosolutions.jaiext.jiffle.runtime;
+package org.eclipse.imagen.media.jiffle.runtime;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class JiffleIndirectRuntimeImpl extends it.geosolutions.jaiext.jiffle.runtime.AbstractIndirectRuntime {
+public class JiffleIndirectRuntimeImpl extends org.eclipse.imagen.media.jiffle.runtime.AbstractIndirectRuntime {
     double v_MaxIter = Double.NaN;
     double v_MinRe = Double.NaN;
     double v_MaxRe = Double.NaN;

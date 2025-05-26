@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.translate.TranslateDescriptor
+descriptor  org.eclipse.imagen.media.translate.TranslateDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.translate.TranslateCRIF  it.geosolutions.jaiext  Translate Translate 
+rendered  org.eclipse.imagen.media.translate.TranslateCRIF  org.eclipse.imagen.media  Translate Translate

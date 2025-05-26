@@ -2,10 +2,10 @@
 # Image descriptors
 #
 
-descriptor  it.geosolutions.jaiext.rescale.RescaleDescriptor
+descriptor  org.eclipse.imagen.media.rescale.RescaleDescriptor
 
 #
 # RenderedImageFactories
 #
 
-rendered  it.geosolutions.jaiext.rescale.RescaleCRIF  it.geosolutions.jaiext  Rescale Rescale 
+rendered  org.eclipse.imagen.media.rescale.RescaleCRIF  org.eclipse.imagen.media  Rescale Rescale
