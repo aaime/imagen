@@ -18,7 +18,9 @@
 package it.geosolutions.concurrent;
 
 import com.google.common.cache.*;
-import com.sun.media.jai.util.CacheDiagnostics;
+import org.eclipse.imagen.TileCache;
+import org.eclipse.imagen.media.util.CacheDiagnostics;
+
 import java.awt.*;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
@@ -26,7 +28,6 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Observable;
 import java.util.Vector;
-import javax.media.jai.TileCache;
 
 public class ConcurrentTileCache extends Observable implements TileCache, CacheDiagnostics {
 

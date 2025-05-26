@@ -17,21 +17,6 @@
 */
 package it.geosolutions.jaiext.utilities;
 
-import com.sun.media.imageioimpl.common.BogusColorSpace;
-import org.eclipse.imagen.ColorSpaceJAI;
-import org.eclipse.imagen.JAI;
-import org.eclipse.imagen.LookupTableJAI;
-import org.eclipse.imagen.ParameterBlockJAI;
-import org.eclipse.imagen.PixelAccessor;
-import org.eclipse.imagen.PlanarImage;
-import org.eclipse.imagen.RasterFactory;
-import org.eclipse.imagen.RenderedOp;
-import org.eclipse.imagen.TiledImage;
-import org.eclipse.imagen.UnpackedImageData;
-import org.eclipse.imagen.iterator.RectIterFactory;
-import org.eclipse.imagen.iterator.WritableRectIter;
-import org.eclipse.imagen.media.codecimpl.util.FloatDoubleColorModel;
-
 import java.awt.*;
 import java.awt.color.ColorSpace;
 import java.awt.image.ColorModel;
@@ -53,6 +38,20 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import org.eclipse.imagen.ColorSpaceJAI;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.LookupTableJAI;
+import org.eclipse.imagen.NotAColorSpace;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.PixelAccessor;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.TiledImage;
+import org.eclipse.imagen.UnpackedImageData;
+import org.eclipse.imagen.iterator.RectIterFactory;
+import org.eclipse.imagen.iterator.WritableRectIter;
+import org.eclipse.imagen.media.codecimpl.util.FloatDoubleColorModel;
 
 public class ImageUtilities {
 
@@ -882,7 +881,7 @@ public class ImageUtilities {
                 cs = ColorSpace.getInstance(ColorSpace.CS_sRGB);
                 break;
             default:
-                cs = new BogusColorSpace(numBands);
+                cs = new NotAColorSpace(numBands);
         }
 
         // Definition of the colormodel
