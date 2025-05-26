@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.clamp;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.Rectangle;
 import java.awt.image.ColorModel;
@@ -27,12 +26,13 @@ import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.util.Arrays;
 import java.util.Map;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PointOpImage;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.PointOpImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RasterAccessor;
+import org.eclipse.imagen.RasterFormatTag;
+import org.eclipse.imagen.media.util.ImageUtil;
 
 public class ClampOpImage extends PointOpImage {
     /** The lower bound, one for each band. */

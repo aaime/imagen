@@ -25,13 +25,13 @@ import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
 import java.util.Arrays;
-import javax.media.jai.ColorCube;
-import javax.media.jai.JAI;
-import javax.media.jai.KernelJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.ColorCube;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.KernelJAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RenderedOp;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -235,7 +235,7 @@ public class ComparisonTest extends TestBase {
             if (OLD_DESCRIPTOR) {
                 JAIExt.registerJAIDescriptor("OrderedDither");
                 imageCalculated =
-                        javax.media.jai.operator.OrderedDitherDescriptor.create(image, colorMap, ditherMask, null);
+                        org.eclipse.imagen.operator.OrderedDitherDescriptor.create(image, colorMap, ditherMask, null);
             } else {
                 imageCalculated = OrderedDitherDescriptor.create(image, colorMap, ditherMask, null, roi, range, 100d);
             }

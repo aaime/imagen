@@ -20,7 +20,7 @@ package it.geosolutions.rendered.viewer;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import javax.imageio.ImageReadParam;
-import javax.media.jai.WarpAffine;
+import org.eclipse.imagen.WarpAffine;
 
 class StringifyUtilities {
 

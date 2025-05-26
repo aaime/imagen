@@ -23,7 +23,6 @@ import com.google.common.cache.RemovalCause;
 import com.google.common.cache.RemovalListener;
 import com.google.common.cache.RemovalNotification;
 import com.google.common.cache.Weigher;
-import com.sun.media.jai.util.CacheDiagnostics;
 import it.geosolutions.concurrent.ConcurrentTileCache.Actions;
 import java.awt.Point;
 import java.awt.image.Raster;
@@ -37,7 +36,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.TileCache;
+import org.eclipse.imagen.TileCache;
+import org.eclipse.imagen.media.util.CacheDiagnostics;
 
 /**
  * This implementation of the TileCache class uses a Guava Cache and a multimap in order to provide a better concurrency

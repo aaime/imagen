@@ -17,8 +17,6 @@
 */
 package it.geosolutions.jaiext.rlookup;
 
-import com.sun.media.jai.opimage.RIFUtil;
-import com.sun.media.jai.util.JDKWorkarounds;
 import it.geosolutions.jaiext.range.Range.DataType;
 import java.awt.RenderingHints;
 import java.awt.image.ColorModel;
@@ -28,10 +26,12 @@ import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.util.List;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.ROI;
-import javax.media.jai.RasterFactory;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.media.opimage.RIFUtil;
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**
  * The image factory for the RangeLookup operation.

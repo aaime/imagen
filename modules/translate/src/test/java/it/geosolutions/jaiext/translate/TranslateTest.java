@@ -22,8 +22,8 @@ import static org.junit.Assert.assertEquals;
 import it.geosolutions.jaiext.testclasses.TestBase;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
 import org.junit.Test;
 
 /**

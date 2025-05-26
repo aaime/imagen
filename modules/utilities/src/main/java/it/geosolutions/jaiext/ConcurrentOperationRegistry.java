@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext;
 
-import com.sun.media.jai.util.PropertyUtil;
 import it.geosolutions.jaiext.interpolators.InterpolationBicubic;
 import it.geosolutions.jaiext.interpolators.InterpolationBilinear;
 import it.geosolutions.jaiext.interpolators.InterpolationNearest;
@@ -41,17 +40,18 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.Interpolation;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptor;
-import javax.media.jai.OperationNode;
-import javax.media.jai.OperationRegistry;
-import javax.media.jai.PropertyGenerator;
-import javax.media.jai.PropertySource;
-import javax.media.jai.RegistryElementDescriptor;
-import javax.media.jai.registry.RenderedRegistryMode;
-import javax.media.jai.util.ImagingException;
-import javax.media.jai.util.ImagingListener;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptor;
+import org.eclipse.imagen.OperationNode;
+import org.eclipse.imagen.OperationRegistry;
+import org.eclipse.imagen.PropertyGenerator;
+import org.eclipse.imagen.PropertySource;
+import org.eclipse.imagen.RegistryElementDescriptor;
+import org.eclipse.imagen.media.util.PropertyUtil;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
+import org.eclipse.imagen.util.ImagingException;
+import org.eclipse.imagen.util.ImagingListener;
 
 /**
  * A thread safe implementation of OperationRegistry using Java 5 Concurrent {@link ReadWriteLock} Also it is able to
@@ -62,7 +62,7 @@ import javax.media.jai.util.ImagingListener;
  */
 public final class ConcurrentOperationRegistry extends OperationRegistry {
     /** Path to the JAI default registryfile.jai */
-    static String JAI_REGISTRY_FILE = "META-INF/javax.media.jai.registryFile.jai";
+    static String JAI_REGISTRY_FILE = "META-INF/org.eclipse.imagen.registryFile.jai";
 
     /** Name of the other registryfile.jai */
     static String USR_REGISTRY_FILE = "META-INF/registryFile.jaiext";
@@ -77,7 +77,7 @@ public final class ConcurrentOperationRegistry extends OperationRegistry {
     static final String JAI_PRODUCT = "com.sun.media.jai";
 
     /** String associated to the JAI product when the operation is "Null" */
-    static final String JAI_PRODUCT_NULL = "javax.media.jai";
+    static final String JAI_PRODUCT_NULL = "org.eclipse.imagen";
 
     /** Logger associated to the class */
     private static final Logger LOGGER = Logger.getLogger(ConcurrentOperationRegistry.class.toString());
@@ -797,16 +797,16 @@ public final class ConcurrentOperationRegistry extends OperationRegistry {
                     // If the parameter is an instance of one of the JAI-EXT Interpolation classes
                     // then it is transformed into the related JAI Interpolation class.
                     if (param instanceof InterpolationNearest) {
-                        interp = new javax.media.jai.InterpolationNearest();
+                        interp = new org.eclipse.imagen.InterpolationNearest();
                     } else if (param instanceof InterpolationBilinear) {
                         InterpolationBilinear bil = (InterpolationBilinear) param;
-                        interp = new javax.media.jai.InterpolationBilinear(bil.getSubsampleBitsH());
+                        interp = new org.eclipse.imagen.InterpolationBilinear(bil.getSubsampleBitsH());
                     } else if (param instanceof InterpolationBicubic) {
                         InterpolationBicubic bic = (InterpolationBicubic) param;
                         if (bic.isBicubic2()) {
-                            interp = new javax.media.jai.InterpolationBicubic2(bic.getSubsampleBitsH());
+                            interp = new org.eclipse.imagen.InterpolationBicubic2(bic.getSubsampleBitsH());
                         } else {
-                            interp = new javax.media.jai.InterpolationBicubic(bic.getSubsampleBitsH());
+                            interp = new org.eclipse.imagen.InterpolationBicubic(bic.getSubsampleBitsH());
                         }
                     }
                     if (interp != null) {
@@ -1042,15 +1042,7 @@ public final class ConcurrentOperationRegistry extends OperationRegistry {
                 // If there is the MediaLib factory, it is saved inside the OperationItem
                 // but it is not used by default
                 for (Object factory : list) {
-                    if (factory.getClass().getName().contains("Mlib")) {
-                        // Ensure Medialib is present
-                        if (JAIExt.isMedialibavailable()) {
-                            value.setMlibFactory(factory);
-                        }
-                    } else {
-                        value.setFactory(factory);
-                        break;
-                    }
+                    value.setFactory(factory);
                 }
             }
             return value;

@@ -26,7 +26,7 @@ import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.Arrays;
 import java.util.Comparator;
-import javax.media.jai.iterator.RectIter;
+import org.eclipse.imagen.iterator.RectIter;
 
 /**
  * Builds a histogram of a certain image making sure that we don't end up with too many entries. If the unique colors in

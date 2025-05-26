@@ -22,14 +22,14 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderableOp;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.registry.RenderableRegistryMode;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RenderableOp;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.registry.RenderableRegistryMode;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * An <code>OperationDescriptor</code> describing the "Binarize" operation.
@@ -72,7 +72,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  *                        <th>Default Value</th></tr>
  * <tr><td>threshold</td> <td>java.lang.Double</td>
  *                        <td>NO_PARAMETER_DEFAULT</td>
- * <tr><td>roi</td> <td>javax.media.jai.ROI</td>
+ * <tr><td>roi</td> <td>org.eclipse.imagen.ROI</td>
  *                        <td>null</td>
  * <tr><td>nodata</td> <td>it.geosolutions.jaiext.range.Range</td>
  *                        <td>null</td>
@@ -101,7 +101,7 @@ public class BinarizeDescriptor extends OperationDescriptorImpl {
 
     /** The parameter class list for this operation. */
     private static final Class[] paramClasses = {
-        java.lang.Double.class, javax.media.jai.ROI.class, it.geosolutions.jaiext.range.Range.class
+        java.lang.Double.class, org.eclipse.imagen.ROI.class, it.geosolutions.jaiext.range.Range.class
     };
 
     /** The parameter default value list */

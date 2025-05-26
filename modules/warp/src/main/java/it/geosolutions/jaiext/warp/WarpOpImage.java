@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.warp;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.interpolators.InterpolationNoData;
 import it.geosolutions.jaiext.iterators.RandomIterFactory;
 import it.geosolutions.jaiext.range.Range;
@@ -33,8 +32,9 @@ import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Arrays;
 import java.util.Map;
-import javax.media.jai.*;
-import javax.media.jai.iterator.RandomIter;
+import org.eclipse.imagen.*;
+import org.eclipse.imagen.iterator.RandomIter;
+import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * Subclass of {@link WarpOpImage} that makes use of the provided ROI and NoData.
@@ -42,7 +42,7 @@ import javax.media.jai.iterator.RandomIter;
  * @author Simone Giannecchini, GeoSolutions SAS
  */
 @SuppressWarnings("unchecked")
-public abstract class WarpOpImage extends javax.media.jai.WarpOpImage {
+public abstract class WarpOpImage extends org.eclipse.imagen.WarpOpImage {
 
     /** {@link BorderExtender} instance for extending roi. */
     protected static final BorderExtender ZERO_EXTENDER = BorderExtender.createInstance(BorderExtender.BORDER_ZERO);

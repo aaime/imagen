@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.convolve;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.iterators.RandomIterFactory;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.Point;
@@ -29,8 +28,9 @@ import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Arrays;
-import javax.media.jai.*;
-import javax.media.jai.iterator.RandomIter;
+import org.eclipse.imagen.*;
+import org.eclipse.imagen.iterator.RandomIter;
+import org.eclipse.imagen.media.util.ImageUtil;
 
 public abstract class ConvolveOpImage extends AreaOpImage {
 

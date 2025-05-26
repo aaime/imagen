@@ -21,7 +21,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import javax.imageio.ImageReadParam;
-import javax.media.jai.WarpAffine;
+import org.eclipse.imagen.WarpAffine;
 
 /**
  * HTML renderers registry

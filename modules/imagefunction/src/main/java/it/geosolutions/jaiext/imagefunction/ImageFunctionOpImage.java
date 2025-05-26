@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.imagefunction;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.range.Range;
 import it.geosolutions.jaiext.range.RangeFactory;
 import java.awt.Rectangle;
@@ -25,13 +24,14 @@ import java.awt.image.DataBuffer;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Map;
-import javax.media.jai.ImageFunction;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RasterFactory;
-import javax.media.jai.SourcelessOpImage;
+import org.eclipse.imagen.ImageFunction;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.SourcelessOpImage;
+import org.eclipse.imagen.media.util.ImageUtil;
 
 /** An OpImage class to generate an image from a functional description. */
 public class ImageFunctionOpImage extends SourcelessOpImage {

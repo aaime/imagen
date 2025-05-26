@@ -24,11 +24,11 @@ import it.geosolutions.jaiext.testclasses.TestBase;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RenderedOp;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -224,7 +224,7 @@ public class ComparisonTest extends TestBase {
             // creation of the image
             if (OLD_DESCRIPTOR) {
                 JAIExt.registerJAIDescriptor("Rescale");
-                imageRescale = javax.media.jai.operator.RescaleDescriptor.create(image, scales, offsets, null);
+                imageRescale = org.eclipse.imagen.operator.RescaleDescriptor.create(image, scales, offsets, null);
             } else {
                 imageRescale = RescaleDescriptor.create(image, scales, offsets, roi, range, false, destNoData, null);
             }

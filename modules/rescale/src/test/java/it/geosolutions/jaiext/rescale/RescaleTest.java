@@ -19,7 +19,6 @@ package it.geosolutions.jaiext.rescale;
 
 import static org.junit.Assert.*;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.range.Range;
 import it.geosolutions.jaiext.range.RangeFactory;
 import it.geosolutions.jaiext.testclasses.TestBase;
@@ -29,9 +28,10 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

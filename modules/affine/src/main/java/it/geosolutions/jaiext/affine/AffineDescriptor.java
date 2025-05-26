@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.affine;
 
-import com.sun.media.jai.util.PropertyGeneratorImpl;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
@@ -27,18 +26,19 @@ import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderableImage;
 import java.util.Collections;
 import java.util.logging.Logger;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderableOp;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.registry.RenderableRegistryMode;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.PropertyGenerator;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RenderableOp;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
+import org.eclipse.imagen.registry.RenderableRegistryMode;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /** This property generator computes the properties for the operation "Affine" dynamically. */
 class AffinePropertyGenerator extends PropertyGeneratorImpl {
@@ -219,7 +219,7 @@ class AffinePropertyGenerator extends PropertyGeneratorImpl {
  *                            <th>Default Value</th></tr>
  * <tr><td>transform</td>     <td>java.awt.geom.AffineTransform</td>
  *                            <td>identity transform</td>
- * <tr><td>interpolation</td> <td>javax.media.jai.Interpolation</td>
+ * <tr><td>interpolation</td> <td>org.eclipse.imagen.Interpolation</td>
  *                            <td>null</td>
  * <tr><td>backgroundValues</td> <td>double[]</td>
  *                            <td>null</td>
@@ -234,8 +234,8 @@ class AffinePropertyGenerator extends PropertyGeneratorImpl {
  * </table>
  *
  * @see java.awt.geom.AffineTransform
- * @see javax.media.jai.Interpolation
- * @see javax.media.jai.OperationDescriptor
+ * @see org.eclipse.imagen.Interpolation
+ * @see org.eclipse.imagen.OperationDescriptor
  */
 @SuppressWarnings("serial")
 public class AffineDescriptor extends OperationDescriptorImpl {
@@ -267,7 +267,7 @@ public class AffineDescriptor extends OperationDescriptorImpl {
     /** The parameter class list for this operation. */
     private static final Class[] paramClasses = {
         java.awt.geom.AffineTransform.class,
-        javax.media.jai.Interpolation.class,
+        org.eclipse.imagen.Interpolation.class,
         double[].class,
         ROI.class,
         java.lang.Boolean.class,

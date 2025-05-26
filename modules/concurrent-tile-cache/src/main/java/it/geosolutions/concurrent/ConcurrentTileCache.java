@@ -17,14 +17,9 @@
 */
 package it.geosolutions.concurrent;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.RemovalCause;
-import com.google.common.cache.RemovalListener;
-import com.google.common.cache.RemovalNotification;
-import com.google.common.cache.Weigher;
+import com.google.common.cache.*;
 import com.sun.media.jai.util.CacheDiagnostics;
-import java.awt.Point;
+import java.awt.*;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.Comparator;

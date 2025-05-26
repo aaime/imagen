@@ -45,8 +45,8 @@ import it.geosolutions.jaiext.jiffle.Jiffle;
 import it.geosolutions.jaiext.utilities.ImageUtilities;
 import java.awt.image.RenderedImage;
 import java.util.HashMap;
-import javax.media.jai.ROI;
-import javax.media.jai.TiledImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.TiledImage;
 import org.junit.Test;
 
 /**

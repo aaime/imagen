@@ -35,13 +35,6 @@
 
 package it.geosolutions.jaiext.iterators;
 
-import com.sun.media.jai.iterator.RectIterCSMFloat;
-import com.sun.media.jai.iterator.RectIterFallback;
-import com.sun.media.jai.iterator.WrapperRI;
-import com.sun.media.jai.iterator.WrapperWRI;
-import com.sun.media.jai.iterator.WritableRectIterCSMByte;
-import com.sun.media.jai.iterator.WritableRectIterCSMFloat;
-import com.sun.media.jai.iterator.WritableRectIterFallback;
 import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.DataBuffer;
@@ -50,8 +43,15 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.awt.image.WritableRenderedImage;
-import javax.media.jai.iterator.RectIter;
-import javax.media.jai.iterator.WritableRectIter;
+import org.eclipse.imagen.iterator.RectIter;
+import org.eclipse.imagen.iterator.WritableRectIter;
+import org.eclipse.imagen.media.iterator.RectIterCSMFloat;
+import org.eclipse.imagen.media.iterator.RectIterFallback;
+import org.eclipse.imagen.media.iterator.WrapperRI;
+import org.eclipse.imagen.media.iterator.WrapperWRI;
+import org.eclipse.imagen.media.iterator.WritableRectIterCSMByte;
+import org.eclipse.imagen.media.iterator.WritableRectIterCSMFloat;
+import org.eclipse.imagen.media.iterator.WritableRectIterFallback;
 
 /**
  * A factory class to instantiate instances of the RectIter and WritableRectIter interfaces on sources of type Raster,

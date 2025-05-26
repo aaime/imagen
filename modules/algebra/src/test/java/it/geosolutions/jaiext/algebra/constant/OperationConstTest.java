@@ -19,7 +19,6 @@ package it.geosolutions.jaiext.algebra.constant;
 
 import static org.junit.Assert.assertEquals;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.algebra.AlgebraDescriptor.Operator;
 import it.geosolutions.jaiext.range.Range;
 import it.geosolutions.jaiext.range.RangeFactory;
@@ -28,9 +27,10 @@ import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.util.ImageUtil;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

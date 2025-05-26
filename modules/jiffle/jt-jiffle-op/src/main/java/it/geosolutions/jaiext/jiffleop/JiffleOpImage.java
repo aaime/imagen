@@ -54,9 +54,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.Vector;
 import java.util.stream.Collectors;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.OpImage;
+import org.eclipse.imagen.PlanarImage;
 
 /**
  * Jiffle operation.

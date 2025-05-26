@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.warp;
 
-import com.sun.media.jai.util.ImageUtil;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.image.ColorModel;
 import java.awt.image.DataBuffer;
@@ -25,18 +24,19 @@ import java.awt.image.IndexColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.util.Map;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.Warp;
-import javax.media.jai.iterator.RandomIter;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RasterAccessor;
+import org.eclipse.imagen.Warp;
+import org.eclipse.imagen.iterator.RandomIter;
+import org.eclipse.imagen.media.util.ImageUtil;
 
 /**
  * An <code>OpImage</code> implementing the general "Warp" operation as described in <code>
- * javax.media.jai.operator.WarpDescriptor</code>. It supports all interpolation cases.
+ * org.eclipse.imagen.operator.WarpDescriptor</code>. It supports all interpolation cases.
  *
  * <p>The layout for the destination image may be specified via the <code>ImageLayout</code> parameter. However, only
  * those settings suitable for this operation will be used. The unsuitable settings will be replaced by default suitable
@@ -46,9 +46,9 @@ import javax.media.jai.iterator.RandomIter;
  * <p>If the input image contains an IndexColorModel, then pixel values are taken directly from the input color table.
  *
  * @since EA2
- * @see javax.media.jai.Warp
- * @see javax.media.jai.WarpOpImage
- * @see javax.media.jai.operator.WarpDescriptor
+ * @see org.eclipse.imagen.Warp
+ * @see org.eclipse.imagen.WarpOpImage
+ * @see org.eclipse.imagen.operator.WarpDescriptor
  * @see WarpRIF
  */
 @SuppressWarnings("unchecked")

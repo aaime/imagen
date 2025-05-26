@@ -39,10 +39,10 @@ import it.geosolutions.jaiext.utilities.ImageUtilities;
 import java.awt.*;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.JAI;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.ExtremaDescriptor;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.operator.ExtremaDescriptor;
 import org.junit.Test;
 
 public class ClassBreaksOpImageTest extends TestBase {

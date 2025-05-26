@@ -19,12 +19,12 @@ package it.geosolutions.jaiext.rlookup;
 
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * Describes the "RangeLookup" operation.
@@ -103,7 +103,7 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * </tr>
  * <tr>
  * <td>roi</td>
- * <td>javax.media.jai.ROI</td>
+ * <td>org.eclipse.imagen.ROI</td>
  * <td>Specifies a ROI to use for reducing computation area</td>
  * <td>null</td>
  * </tr>
@@ -125,7 +125,7 @@ public class RangeLookupDescriptor extends OperationDescriptorImpl {
 
     private static final String[] paramNames = {"table", "default", "roi"};
 
-    private static final Class<?>[] paramClasses = {RangeLookupTable.class, Number.class, javax.media.jai.ROI.class};
+    private static final Class<?>[] paramClasses = {RangeLookupTable.class, Number.class, org.eclipse.imagen.ROI.class};
 
     private static final Object[] paramDefaults = {NO_PARAMETER_DEFAULT, (Number) null, null};
 

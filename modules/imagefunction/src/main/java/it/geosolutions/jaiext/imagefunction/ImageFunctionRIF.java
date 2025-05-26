@@ -17,15 +17,15 @@
 */
 package it.geosolutions.jaiext.imagefunction;
 
-import com.sun.media.jai.opimage.RIFUtil;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.ImageFunction;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.ImageFunction;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 /**
  * {@link RenderedImageFactory} implementation generating a {@link ImageFunctionOpImage} instance.

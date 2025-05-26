@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.bandmerge;
 
-import com.sun.media.jai.opimage.RIFUtil;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
@@ -25,9 +24,10 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.ArrayList;
 import java.util.List;
-import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.CRIFImpl;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 /** A <code>CRIF</code> supporting the "BandMerge" operation on rendered and renderable images. */
 public class BandMergeCRIF extends CRIFImpl {

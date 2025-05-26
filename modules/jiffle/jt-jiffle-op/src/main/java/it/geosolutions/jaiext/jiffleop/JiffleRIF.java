@@ -58,9 +58,9 @@ import java.awt.image.renderable.RenderedImageFactory;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.RasterFactory;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.RasterFactory;
 
 /**
  * The image factory for the "Jiffle" operation.

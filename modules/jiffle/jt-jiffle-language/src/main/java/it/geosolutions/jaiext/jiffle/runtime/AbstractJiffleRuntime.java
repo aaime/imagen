@@ -55,8 +55,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.media.jai.ROI;
-import javax.media.jai.iterator.RandomIter;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.iterator.RandomIter;
 
 /**
  * Provides default implementations of {@link JiffleRuntime} methods plus some common fields. The fields include those

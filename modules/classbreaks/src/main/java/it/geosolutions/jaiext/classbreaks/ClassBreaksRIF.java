@@ -37,8 +37,8 @@ import static it.geosolutions.jaiext.classbreaks.ClassBreaksDescriptor.*;
 import java.awt.*;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.CRIFImpl;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.CRIFImpl;
+import org.eclipse.imagen.ROI;
 
 /**
  * RIF for the ClassBreaks operation.

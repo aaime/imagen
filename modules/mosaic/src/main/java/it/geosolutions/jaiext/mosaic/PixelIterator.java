@@ -18,7 +18,7 @@
 package it.geosolutions.jaiext.mosaic;
 
 import java.awt.Rectangle;
-import javax.media.jai.RasterAccessor;
+import org.eclipse.imagen.RasterAccessor;
 
 /**
  * Provides access to a Raster pixels with a few optimizations:
@@ -33,7 +33,7 @@ import javax.media.jai.RasterAccessor;
  *       of just one band
  * </ul>
  *
- * <p>Functionality wise, it's similar to a {@link javax.media.jai.iterator.RectIter}, but performs raw access to the
+ * <p>Functionality wise, it's similar to a {@link org.eclipse.imagen.iterator.RectIter}, but performs raw access to the
  * data banks rathern than going through the sample model.
  */
 abstract class PixelIterator {

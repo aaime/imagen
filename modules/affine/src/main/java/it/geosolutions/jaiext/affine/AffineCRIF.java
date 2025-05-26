@@ -17,9 +17,6 @@
 */
 package it.geosolutions.jaiext.affine;
 
-import com.sun.media.jai.mlib.MlibAffineRIF;
-import com.sun.media.jai.opimage.CopyOpImage;
-import com.sun.media.jai.opimage.RIFUtil;
 import it.geosolutions.jaiext.interpolators.InterpolationBicubic;
 import it.geosolutions.jaiext.interpolators.InterpolationBilinear;
 import it.geosolutions.jaiext.interpolators.InterpolationNearest;
@@ -30,7 +27,6 @@ import it.geosolutions.jaiext.scale.ScaleBilinearOpImage;
 import it.geosolutions.jaiext.scale.ScaleGeneralOpImage;
 import it.geosolutions.jaiext.scale.ScaleNearestOpImage;
 import it.geosolutions.jaiext.translate.TranslateIntOpImage;
-import it.geosolutions.jaiext.utilities.ImageUtilities;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
@@ -43,12 +39,14 @@ import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderContext;
 import java.awt.image.renderable.RenderableImage;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.CRIFImpl;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.media.opimage.CopyOpImage;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 /**
  * @since EA4
@@ -106,21 +104,6 @@ public class AffineCRIF extends CRIFImpl {
             source = temp;
             // If ROI is present then the ROI Accessor can be set to true.
             useROIAccessor = (Boolean) paramBlock.getObjectParameter(4);
-        }
-
-        try {
-            // check if we can use the native operation instead
-            Rectangle sourceBounds =
-                    new Rectangle(source.getMinX(), source.getMinY(), source.getWidth(), source.getHeight());
-            if ((roi == null || (ImageUtilities.isMediaLibAvailable() && roi.contains(sourceBounds)))
-                    && (nodata == null)) {
-                RenderedImage accelerated = new MlibAffineRIF().create(paramBlock, renderHints);
-                if (accelerated != null) {
-                    return accelerated;
-                }
-            }
-        } catch (Exception e) {
-            // Eat exception and proceed with pure java approach
         }
 
         // Get the boolean setDestinationNoData
@@ -187,23 +170,23 @@ public class AffineCRIF extends CRIFImpl {
 
         // Check which kind of interpolation we are using
         boolean nearestInterp =
-                interp instanceof InterpolationNearest || interp instanceof javax.media.jai.InterpolationNearest;
+                interp instanceof InterpolationNearest || interp instanceof org.eclipse.imagen.InterpolationNearest;
         boolean bilinearInterp =
-                interp instanceof InterpolationBilinear || interp instanceof javax.media.jai.InterpolationBilinear;
+                interp instanceof InterpolationBilinear || interp instanceof org.eclipse.imagen.InterpolationBilinear;
         boolean bicubicInterp = interp instanceof InterpolationBicubic
-                || interp instanceof javax.media.jai.InterpolationBicubic
-                || interp instanceof javax.media.jai.InterpolationBicubic2;
+                || interp instanceof org.eclipse.imagen.InterpolationBicubic
+                || interp instanceof org.eclipse.imagen.InterpolationBicubic2;
 
         // Transformation of the interpolators JAI-->JAI-EXT
         int dataType = source.getSampleModel().getDataType();
         double destinationNoData = (backgroundValues != null && backgroundValues.length > 0) ? backgroundValues[0] : 0;
-        if (interp instanceof javax.media.jai.InterpolationNearest) {
+        if (interp instanceof org.eclipse.imagen.InterpolationNearest) {
             interp = new InterpolationNearest(nodata, useROIAccessor, destinationNoData, dataType);
-        } else if (interp instanceof javax.media.jai.InterpolationBilinear) {
+        } else if (interp instanceof org.eclipse.imagen.InterpolationBilinear) {
             interp = new InterpolationBilinear(
                     interp.getSubsampleBitsH(), nodata, useROIAccessor, destinationNoData, dataType);
-        } else if (interp instanceof javax.media.jai.InterpolationBicubic) {
-            javax.media.jai.InterpolationBicubic bic = (javax.media.jai.InterpolationBicubic) interp;
+        } else if (interp instanceof org.eclipse.imagen.InterpolationBicubic) {
+            org.eclipse.imagen.InterpolationBicubic bic = (org.eclipse.imagen.InterpolationBicubic) interp;
             interp = new InterpolationBicubic(
                     bic.getSubsampleBitsH(),
                     nodata,
@@ -212,8 +195,8 @@ public class AffineCRIF extends CRIFImpl {
                     dataType,
                     true,
                     bic.getPrecisionBits());
-        } else if (interp instanceof javax.media.jai.InterpolationBicubic2) {
-            javax.media.jai.InterpolationBicubic2 bic = (javax.media.jai.InterpolationBicubic2) interp;
+        } else if (interp instanceof org.eclipse.imagen.InterpolationBicubic2) {
+            org.eclipse.imagen.InterpolationBicubic2 bic = (org.eclipse.imagen.InterpolationBicubic2) interp;
             interp = new InterpolationBicubic(
                     bic.getSubsampleBitsH(),
                     nodata,

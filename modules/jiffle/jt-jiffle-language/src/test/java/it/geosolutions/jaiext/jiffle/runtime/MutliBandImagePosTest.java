@@ -50,7 +50,7 @@ import it.geosolutions.jaiext.utilities.ImageUtilities;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import javax.media.jai.TiledImage;
+import org.eclipse.imagen.TiledImage;
 import org.junit.Ignore;
 import org.junit.Test;
 

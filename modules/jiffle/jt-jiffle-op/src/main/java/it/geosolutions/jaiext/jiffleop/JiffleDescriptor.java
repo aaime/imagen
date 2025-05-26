@@ -47,11 +47,11 @@ import it.geosolutions.jaiext.jiffle.runtime.CoordinateTransform;
 import java.awt.*;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * Jiffle operation.
@@ -173,7 +173,7 @@ public class JiffleDescriptor extends OperationDescriptorImpl {
      *     such case "src, src1, src2, ..." will be used as image names
      * @param destName The name of the destination image. Can be null, in such case "dest" will be used
      * @param destBounds The output bounds. It is required only if there are no sources, and no
-     *     {@link javax.media.jai.ImageLayout} is provided in the hints, otherwise can be null.
+     *     {@link org.eclipse.imagen.ImageLayout} is provided in the hints, otherwise can be null.
      * @param destType The destination type. Not required, will default to {@link DataBuffer#TYPE_DOUBLE}
      * @param destBands The number of destination bands. Not required, will be automatically computed from the script
      *     source unless the destination bands specs are using expressions.

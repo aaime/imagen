@@ -17,7 +17,7 @@
 */
 package it.geosolutions.jaiext.affine;
 
-import javax.media.jai.Interpolation;
+import org.eclipse.imagen.Interpolation;
 import org.junit.Ignore;
 // import org.junit.Ignore;
 import org.junit.Test;

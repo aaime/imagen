@@ -20,7 +20,7 @@ package it.geosolutions.jaiext.scale;
 import static org.junit.Assert.*;
 
 import java.awt.*;
-import javax.media.jai.Interpolation;
+import org.eclipse.imagen.Interpolation;
 import org.junit.Test;
 
 /**

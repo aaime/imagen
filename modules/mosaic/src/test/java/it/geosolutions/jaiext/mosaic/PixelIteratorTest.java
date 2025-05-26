@@ -27,9 +27,9 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
-import javax.media.jai.RasterFormatTag;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.CropDescriptor;
+import org.eclipse.imagen.RasterFormatTag;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.operator.CropDescriptor;
 import org.junit.Before;
 import org.junit.Test;
 

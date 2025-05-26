@@ -25,7 +25,7 @@ import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.WritableRaster;
 import java.util.Vector;
-import javax.media.jai.RenderedImageAdapter;
+import org.eclipse.imagen.RenderedImageAdapter;
 
 /**
  * a {@link RenderedImageAdapter} alternative that works around a bug in {@link BufferedImage} sub-images

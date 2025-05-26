@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.warp;
 
-import com.sun.media.jai.util.PropertyGeneratorImpl;
 import it.geosolutions.jaiext.range.Range;
 import it.geosolutions.jaiext.utilities.ImageLayout2;
 import java.awt.Rectangle;
@@ -29,22 +28,23 @@ import java.awt.image.renderable.RenderedImageFactory;
 import java.util.Collections;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptor;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.OperationRegistry;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.PropertyGenerator;
-import javax.media.jai.ROI;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.Warp;
-import javax.media.jai.operator.ConstantDescriptor;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptor;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.OperationRegistry;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.PropertyGenerator;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.Warp;
+import org.eclipse.imagen.media.util.PropertyGeneratorImpl;
+import org.eclipse.imagen.operator.ConstantDescriptor;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /** This property generator computes the properties for the operation "Warp" dynamically. */
 class WarpPropertyGenerator extends PropertyGeneratorImpl {
@@ -260,11 +260,11 @@ class WarpPropertyGenerator extends PropertyGeneratorImpl {
  * </tr>
  * <tr>
  * <td>warp</td>
- * <td>javax.media.jai.Warp</td>
+ * <td>org.eclipse.imagen.Warp</td>
  * <td>NO_PARAMETER_DEFAULT</td>
  * <tr>
  * <td>interpolation</td>
- * <td>javax.media.jai.Interpolation</td>
+ * <td>org.eclipse.imagen.Interpolation</td>
  * <td>null</td>
  * <tr>
  * <td>backgroundValues</td>
@@ -272,7 +272,7 @@ class WarpPropertyGenerator extends PropertyGeneratorImpl {
  * <td>{0.0}</td>
  * <tr>
  * <td>roi</td>
- * <td>javax.media.jai.ROI</td>
+ * <td>org.eclipse.imagen.ROI</td>
  * <td>null</td>
  * <tr>
  * <td>nodata</td>
@@ -280,9 +280,9 @@ class WarpPropertyGenerator extends PropertyGeneratorImpl {
  * <td>null</td>
  * </table>
  *
- * @see javax.media.jai.Interpolation
- * @see javax.media.jai.Warp
- * @see javax.media.jai.OperationDescriptor
+ * @see org.eclipse.imagen.Interpolation
+ * @see org.eclipse.imagen.Warp
+ * @see org.eclipse.imagen.OperationDescriptor
  */
 public class WarpDescriptor extends OperationDescriptorImpl {
 
@@ -338,10 +338,10 @@ public class WarpDescriptor extends OperationDescriptorImpl {
 
     /** The parameter class types for the "Warp" operation. */
     private static final Class[] paramClasses = {
-        javax.media.jai.Warp.class,
-        javax.media.jai.Interpolation.class,
+        org.eclipse.imagen.Warp.class,
+        org.eclipse.imagen.Interpolation.class,
         double[].class,
-        javax.media.jai.ROI.class,
+        org.eclipse.imagen.ROI.class,
         it.geosolutions.jaiext.range.Range.class
     };
 

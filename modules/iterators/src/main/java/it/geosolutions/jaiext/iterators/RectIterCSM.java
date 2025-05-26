@@ -35,12 +35,12 @@
 
 package it.geosolutions.jaiext.iterators;
 
-import com.sun.media.jai.iterator.RectIterFallback;
 import java.awt.Rectangle;
 import java.awt.image.ComponentSampleModel;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
-import javax.media.jai.PlanarImage;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.media.iterator.RectIterFallback;
 
 /** */
 public abstract class RectIterCSM extends RectIterFallback {

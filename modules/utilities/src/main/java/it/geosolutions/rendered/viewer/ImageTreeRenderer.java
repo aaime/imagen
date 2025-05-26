@@ -21,9 +21,9 @@ import java.awt.Component;
 import java.awt.image.RenderedImage;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.RenderedOp;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultTreeCellRenderer;
+import org.eclipse.imagen.RenderedOp;
 
 // import com.digitalglobe.util.Log4jUtil;
 

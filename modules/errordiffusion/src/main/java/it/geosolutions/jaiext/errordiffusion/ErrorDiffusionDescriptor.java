@@ -21,14 +21,14 @@ import it.geosolutions.jaiext.range.Range;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.JAI;
-import javax.media.jai.KernelJAI;
-import javax.media.jai.LookupTableJAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.KernelJAI;
+import org.eclipse.imagen.LookupTableJAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * An <code>OperationDescriptor</code> describing the "ErrorDiffusion" operation.
@@ -103,15 +103,15 @@ import javax.media.jai.registry.RenderedRegistryMode;
  * </tr>
  * <tr>
  * <td>colorMap</td>
- * <td>javax.media.jai.LookupTableJAI</td>
+ * <td>org.eclipse.imagen.LookupTableJAI</td>
  * <td>NO_PARAMETER_DEFAULT</td>
  * <tr>
  * <td>errorKernel</td>
- * <td>javax.media.jai.KernelJAI</td>
- * <td>javax.media.jai.KernelJAI.ERROR_FILTER_FLOYD_STEINBERG</td>
+ * <td>org.eclipse.imagen.KernelJAI</td>
+ * <td>org.eclipse.imagen.KernelJAI.ERROR_FILTER_FLOYD_STEINBERG</td>
  * <tr>
  * <td>roi</td>
- * <td>javax.media.jai.ROI</td>
+ * <td>org.eclipse.imagen.ROI</td>
  * <td>null</td>
  * <tr>
  * <td>nodata</td>
@@ -148,9 +148,9 @@ public class ErrorDiffusionDescriptor extends OperationDescriptorImpl {
 
     /** The parameter class types for the "ErrorDiffusion" operation. */
     private static final Class[] paramClasses = {
-        javax.media.jai.LookupTableJAI.class,
-        javax.media.jai.KernelJAI.class,
-        javax.media.jai.ROI.class,
+        org.eclipse.imagen.LookupTableJAI.class,
+        org.eclipse.imagen.KernelJAI.class,
+        org.eclipse.imagen.ROI.class,
         it.geosolutions.jaiext.range.Range.class,
         Integer.class
     };

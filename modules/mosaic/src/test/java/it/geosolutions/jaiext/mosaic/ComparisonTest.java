@@ -24,13 +24,13 @@ import it.geosolutions.jaiext.testclasses.TestBase;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.MosaicType;
-import javax.media.jai.operator.NullDescriptor;
-import javax.media.jai.operator.TranslateDescriptor;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.operator.MosaicType;
+import org.eclipse.imagen.operator.NullDescriptor;
+import org.eclipse.imagen.operator.TranslateDescriptor;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -151,10 +151,10 @@ public class ComparisonTest extends TestBase {
         String mosaic = "";
 
         if (!blend) {
-            mosaicType = javax.media.jai.operator.MosaicDescriptor.MOSAIC_TYPE_OVERLAY;
+            mosaicType = org.eclipse.imagen.operator.MosaicDescriptor.MOSAIC_TYPE_OVERLAY;
             mosaic = "Mosaic Type Overlay";
         } else {
-            mosaicType = javax.media.jai.operator.MosaicDescriptor.MOSAIC_TYPE_BLEND;
+            mosaicType = org.eclipse.imagen.operator.MosaicDescriptor.MOSAIC_TYPE_BLEND;
             mosaic = "Mosaic Type Blend";
         }
 
@@ -176,7 +176,7 @@ public class ComparisonTest extends TestBase {
                 // background values and threshold
                 double[] background = {destinationNoData, destinationNoData};
                 double[][] threshold = {{0}, {0}};
-                imageMosaic = javax.media.jai.operator.MosaicDescriptor.create(
+                imageMosaic = org.eclipse.imagen.operator.MosaicDescriptor.create(
                         images, mosaicType, null, null, threshold, background, hints);
             } else {
 

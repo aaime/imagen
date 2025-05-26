@@ -17,13 +17,13 @@
 */
 package it.geosolutions.jaiext.bandselect;
 
-import com.sun.media.jai.util.JDKWorkarounds;
 import java.awt.*;
 import java.awt.image.*;
 import java.util.Map;
-import javax.media.jai.ComponentSampleModelJAI;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PointOpImage;
+import org.eclipse.imagen.ComponentSampleModelJAI;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.PointOpImage;
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 /**
  * An <code>OpImage</code> implementing the "BandSelect" operation.
@@ -31,7 +31,7 @@ import javax.media.jai.PointOpImage;
  * <p>This <code>OpImage</code> copies the specified bands of the source image to the destination image in the order
  * that is specified.
  *
- * @see javax.media.jai.operator.BandSelectDescriptor
+ * @see org.eclipse.imagen.operator.BandSelectDescriptor
  * @see BandSelectCRIF
  * @author Simone Giannecchini, GeoSolutions SAS
  * @since 1.0

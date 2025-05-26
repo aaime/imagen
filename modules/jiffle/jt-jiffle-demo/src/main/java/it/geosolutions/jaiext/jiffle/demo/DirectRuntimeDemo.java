@@ -50,7 +50,7 @@ import java.awt.image.RenderedImage;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
-import javax.media.jai.TiledImage;
+import org.eclipse.imagen.TiledImage;
 
 /**
  * Demonstrates how to retrieve and use a runtime object from a compiled Jiffle script.

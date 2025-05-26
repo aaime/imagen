@@ -22,8 +22,8 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.Map;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.PointOpImage;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.PointOpImage;
 
 /**
  * An alternative implementation of JAI Crop that respects the tile cache and tile scheduler specified in the rendering

@@ -34,10 +34,10 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptor;
-import javax.media.jai.OperationRegistry;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptor;
+import org.eclipse.imagen.OperationRegistry;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * Utility class used for registering and unregistering JAI and JAI-EXT operations.
@@ -706,9 +706,5 @@ public class JAIExt {
         } finally {
             writeLock.unlock();
         }
-    }
-
-    public static boolean isMedialibavailable() {
-        return mediaLibAvailable;
     }
 }

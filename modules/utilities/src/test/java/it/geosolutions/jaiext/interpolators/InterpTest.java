@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.interpolators;
 
-import com.sun.media.jai.util.Rational;
 import it.geosolutions.jaiext.iterators.RandomIterFactory;
 import it.geosolutions.jaiext.range.Range;
 import it.geosolutions.jaiext.range.RangeFactory;
@@ -26,15 +25,16 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROIShape;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.RasterFormatTag;
-import javax.media.jai.TiledImage;
-import javax.media.jai.iterator.RandomIter;
 import junit.framework.TestCase;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROIShape;
+import org.eclipse.imagen.RasterAccessor;
+import org.eclipse.imagen.RasterFormatTag;
+import org.eclipse.imagen.TiledImage;
+import org.eclipse.imagen.iterator.RandomIter;
+import org.eclipse.imagen.media.util.Rational;
 import org.junit.Test;
 
 /**

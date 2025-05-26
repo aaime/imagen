@@ -21,9 +21,9 @@ import it.geosolutions.jaiext.JAIExt;
 import it.geosolutions.jaiext.testclasses.TestBase;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import javax.media.jai.JAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -150,7 +150,7 @@ public class ComparisonTest extends TestBase {
             if (OLD_DESCRIPTOR) {
                 JAIExt.registerJAIDescriptor("Null");
                 // Old descriptor calculations
-                imageNull = javax.media.jai.operator.NullDescriptor.create(testImage, null);
+                imageNull = org.eclipse.imagen.operator.NullDescriptor.create(testImage, null);
             } else {
                 // New descriptor calculations
                 imageNull = NullDescriptor.create(testImage, null);

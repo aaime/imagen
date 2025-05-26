@@ -25,9 +25,9 @@ import it.geosolutions.jaiext.testclasses.TestBase;
 import it.geosolutions.jaiext.utilities.ImageUtilities;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.iterator.RandomIter;
-import javax.media.jai.iterator.RandomIterFactory;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.iterator.RandomIter;
+import org.eclipse.imagen.iterator.RandomIterFactory;
 import org.junit.Test;
 
 public class JiffleOpTest extends TestBase {

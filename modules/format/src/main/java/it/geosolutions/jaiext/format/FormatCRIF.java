@@ -17,22 +17,22 @@
 */
 package it.geosolutions.jaiext.format;
 
-import com.sun.media.jai.opimage.CopyOpImage;
-import com.sun.media.jai.opimage.RIFUtil;
-import com.sun.media.jai.util.JDKWorkarounds;
 import java.awt.RenderingHints;
 import java.awt.image.ColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Map;
-import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.NullOpImage;
-import javax.media.jai.OpImage;
-import javax.media.jai.RasterFactory;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.CRIFImpl;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.NullOpImage;
+import org.eclipse.imagen.OpImage;
+import org.eclipse.imagen.RasterFactory;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.media.opimage.CopyOpImage;
+import org.eclipse.imagen.media.opimage.RIFUtil;
+import org.eclipse.imagen.media.util.JDKWorkarounds;
 
 public class FormatCRIF extends CRIFImpl {
 

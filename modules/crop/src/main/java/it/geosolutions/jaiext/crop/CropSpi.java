@@ -19,10 +19,10 @@ package it.geosolutions.jaiext.crop;
 
 import java.awt.image.renderable.RenderedImageFactory;
 import java.util.logging.Logger;
-import javax.media.jai.OperationDescriptor;
-import javax.media.jai.OperationRegistry;
-import javax.media.jai.OperationRegistrySpi;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.OperationDescriptor;
+import org.eclipse.imagen.OperationRegistry;
+import org.eclipse.imagen.OperationRegistrySpi;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * OperationRegistrySpi implementation to register the "Crop" operation and its associated image factories.

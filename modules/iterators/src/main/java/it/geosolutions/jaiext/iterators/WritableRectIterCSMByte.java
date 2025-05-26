@@ -37,7 +37,7 @@ package it.geosolutions.jaiext.iterators;
 
 import java.awt.Rectangle;
 import java.awt.image.RenderedImage;
-import javax.media.jai.iterator.WritableRectIter;
+import org.eclipse.imagen.iterator.WritableRectIter;
 
 /** */
 public class WritableRectIterCSMByte extends RectIterCSMByte implements WritableRectIter {

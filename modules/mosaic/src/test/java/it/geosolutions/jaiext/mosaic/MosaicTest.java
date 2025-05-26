@@ -17,8 +17,8 @@
 */
 package it.geosolutions.jaiext.mosaic;
 
-import static javax.media.jai.operator.MosaicDescriptor.MOSAIC_TYPE_BLEND;
-import static javax.media.jai.operator.MosaicDescriptor.MOSAIC_TYPE_OVERLAY;
+import static org.eclipse.imagen.operator.MosaicDescriptor.MOSAIC_TYPE_BLEND;
+import static org.eclipse.imagen.operator.MosaicDescriptor.MOSAIC_TYPE_OVERLAY;
 import static org.junit.Assert.*;
 
 import it.geosolutions.jaiext.range.Range;
@@ -32,13 +32,13 @@ import java.util.List;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.*;
-import javax.media.jai.operator.BandMergeDescriptor;
-import javax.media.jai.operator.BandSelectDescriptor;
-import javax.media.jai.operator.FormatDescriptor;
-import javax.media.jai.operator.MosaicType;
-import javax.media.jai.operator.TranslateDescriptor;
-import javax.media.jai.util.ImagingException;
+import org.eclipse.imagen.*;
+import org.eclipse.imagen.operator.BandMergeDescriptor;
+import org.eclipse.imagen.operator.BandSelectDescriptor;
+import org.eclipse.imagen.operator.FormatDescriptor;
+import org.eclipse.imagen.operator.MosaicType;
+import org.eclipse.imagen.operator.TranslateDescriptor;
+import org.eclipse.imagen.util.ImagingException;
 import org.junit.Test;
 
 /**

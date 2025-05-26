@@ -17,12 +17,12 @@
 */
 package it.geosolutions.jaiext.translate;
 
-import com.sun.media.jai.opimage.RIFUtil;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageLayout;
+import org.eclipse.imagen.CRIFImpl;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 public class TranslateCRIF extends CRIFImpl {
 

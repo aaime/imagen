@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.ROI;
 
 /**
  * This class is used for storing the statistics associated to a specific geometry. All the statistics are organized

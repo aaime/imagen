@@ -22,8 +22,8 @@ import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.SampleModel;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.iterator.RandomIter;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.iterator.RandomIter;
 
 /**
  * Slight modified version of JAI {@link RandomIterFallbackNoCacheNoArray} that uses short vectors to handle indexes

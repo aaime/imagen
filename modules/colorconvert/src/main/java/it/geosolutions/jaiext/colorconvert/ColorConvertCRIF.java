@@ -17,16 +17,16 @@
 */
 package it.geosolutions.jaiext.colorconvert;
 
-import com.sun.media.jai.opimage.RIFUtil;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.RenderingHints;
 import java.awt.image.ColorModel;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.awt.image.renderable.ParameterBlock;
-import javax.media.jai.CRIFImpl;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.CRIFImpl;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 /**
  * {@link ContextualRenderedImageFactory} implementation used for creating new {@link ColorConvertOpImage} instances.

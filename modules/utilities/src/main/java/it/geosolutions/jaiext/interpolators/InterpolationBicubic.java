@@ -20,9 +20,9 @@ package it.geosolutions.jaiext.interpolators;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.Rectangle;
 import java.awt.image.DataBuffer;
-import javax.media.jai.InterpolationTable;
-import javax.media.jai.RasterAccessor;
-import javax.media.jai.iterator.RandomIter;
+import org.eclipse.imagen.InterpolationTable;
+import org.eclipse.imagen.RasterAccessor;
+import org.eclipse.imagen.iterator.RandomIter;
 
 public class InterpolationBicubic extends InterpolationTable implements InterpolationNoData {
 

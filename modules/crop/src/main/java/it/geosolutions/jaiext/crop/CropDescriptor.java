@@ -22,13 +22,13 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.OperationRegistry;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.OperationRegistry;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * Describes the "Crop" operation which performs a crop on an image, like the standard JAI Crop, but does so respecting
@@ -63,7 +63,7 @@ public class CropDescriptor extends OperationDescriptorImpl {
         Float.class,
         Float.class,
         Float.class,
-        javax.media.jai.ROI.class,
+        org.eclipse.imagen.ROI.class,
         it.geosolutions.jaiext.range.Range.class,
         double[].class
     };

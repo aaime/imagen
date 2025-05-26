@@ -34,7 +34,7 @@ package it.geosolutions.jaiext.classbreaks;
 
 import java.awt.image.RenderedImage;
 import java.util.*;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.ROI;
 
 /** Classification op for the quantile method. */
 public class QuantileBreaksOpImage extends ClassBreaksOpImage {

@@ -20,14 +20,14 @@ package it.geosolutions.jaiext.mosaic;
 import it.geosolutions.jaiext.range.Range;
 import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
-import javax.media.jai.JAI;
-import javax.media.jai.OperationDescriptorImpl;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.operator.MosaicType;
-import javax.media.jai.registry.RenderedRegistryMode;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OperationDescriptorImpl;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.operator.MosaicType;
+import org.eclipse.imagen.registry.RenderedRegistryMode;
 
 /**
  * This class is very similar to the Mosaic operation because it returns a composition of various images of the same
@@ -111,9 +111,9 @@ public class MosaicDescriptor extends OperationDescriptorImpl {
 
     /** The parameter class. Used for the constructor. */
     private static final Class[] paramClasses = {
-        javax.media.jai.operator.MosaicType.class,
-        javax.media.jai.PlanarImage[].class,
-        javax.media.jai.ROI[].class,
+        org.eclipse.imagen.operator.MosaicType.class,
+        org.eclipse.imagen.PlanarImage[].class,
+        org.eclipse.imagen.ROI[].class,
         double[][].class,
         double[].class,
         it.geosolutions.jaiext.range.Range[].class,
@@ -126,7 +126,7 @@ public class MosaicDescriptor extends OperationDescriptorImpl {
 
     /** The parameter values. Used for the constructor. */
     private static final Object[] paramDefaults = {
-        javax.media.jai.operator.MosaicDescriptor.MOSAIC_TYPE_OVERLAY,
+        org.eclipse.imagen.operator.MosaicDescriptor.MOSAIC_TYPE_OVERLAY,
         null,
         null,
         new double[][] {{1.0}},

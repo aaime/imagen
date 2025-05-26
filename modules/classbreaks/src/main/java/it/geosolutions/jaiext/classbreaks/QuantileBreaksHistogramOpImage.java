@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.ROI;
 
 /** Classification op for the quantile method, using histograms instead of a fully developed list of values */
 public class QuantileBreaksHistogramOpImage extends ClassBreaksOpImage {

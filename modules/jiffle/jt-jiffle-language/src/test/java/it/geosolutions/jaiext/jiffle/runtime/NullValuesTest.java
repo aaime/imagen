@@ -49,7 +49,7 @@ import it.geosolutions.jaiext.utilities.ImageUtilities;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import javax.media.jai.TiledImage;
+import org.eclipse.imagen.TiledImage;
 import org.junit.Test;
 
 /**

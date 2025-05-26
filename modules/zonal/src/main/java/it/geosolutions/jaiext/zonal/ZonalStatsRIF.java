@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.zonal;
 
-import com.sun.media.jai.opimage.RIFUtil;
 import it.geosolutions.jaiext.range.Range;
 import it.geosolutions.jaiext.stats.Statistics.StatsType;
 import java.awt.RenderingHints;
@@ -26,8 +25,9 @@ import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
 import java.util.List;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 /**
  * This class is a RenderedImageFactory called by the JAI.create() method when the "Zonal" operation is requested. When

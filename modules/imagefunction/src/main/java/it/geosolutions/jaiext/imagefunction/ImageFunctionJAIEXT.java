@@ -19,8 +19,8 @@ package it.geosolutions.jaiext.imagefunction;
 
 import it.geosolutions.jaiext.range.Range;
 import java.awt.Rectangle;
-import javax.media.jai.ImageFunction;
-import javax.media.jai.ROI;
+import org.eclipse.imagen.ImageFunction;
+import org.eclipse.imagen.ROI;
 
 /**
  * Extension of the {@link ImageFunction} class for handling NoData and ROI

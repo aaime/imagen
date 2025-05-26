@@ -19,7 +19,7 @@ package it.geosolutions.jaiext.scale;
 
 import static org.junit.Assert.assertFalse;
 
-import javax.media.jai.Interpolation;
+import org.eclipse.imagen.Interpolation;
 import org.junit.Ignore;
 import org.junit.Test;
 

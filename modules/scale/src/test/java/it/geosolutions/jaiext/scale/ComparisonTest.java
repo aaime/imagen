@@ -31,12 +31,12 @@ import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.Interpolation;
-import javax.media.jai.JAI;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -107,19 +107,19 @@ public class ComparisonTest extends TestBase {
     private float yScale = 1.5f;
 
     /** JAI nearest Interpolator */
-    private static javax.media.jai.InterpolationNearest interpNearOld;
+    private static org.eclipse.imagen.InterpolationNearest interpNearOld;
 
     /** New nearest Interpolator */
     private static InterpolationNearest interpNearNew;
 
     /** JAI bilinear Interpolator */
-    private static javax.media.jai.InterpolationBilinear interpBilOld;
+    private static org.eclipse.imagen.InterpolationBilinear interpBilOld;
 
     /** New bilinear Interpolator */
     private static InterpolationBilinear interpBilNew;
 
     /** JAI bicubic Interpolator */
-    private static javax.media.jai.InterpolationBicubic interpBicOld;
+    private static org.eclipse.imagen.InterpolationBicubic interpBicOld;
 
     /** New bicubic Interpolator */
     private static InterpolationBicubic interpBicNew;
@@ -150,13 +150,13 @@ public class ComparisonTest extends TestBase {
         }
 
         // Interpolators instantiation
-        interpNearOld = new javax.media.jai.InterpolationNearest();
+        interpNearOld = new org.eclipse.imagen.InterpolationNearest();
         interpNearNew = new InterpolationNearest(rangeND, false, destinationNoData, dataType);
 
-        interpBilOld = new javax.media.jai.InterpolationBilinear(DEFAULT_SUBSAMPLE_BITS);
+        interpBilOld = new org.eclipse.imagen.InterpolationBilinear(DEFAULT_SUBSAMPLE_BITS);
         interpBilNew = new InterpolationBilinear(DEFAULT_SUBSAMPLE_BITS, rangeND, false, destinationNoData, dataType);
 
-        interpBicOld = new javax.media.jai.InterpolationBicubic(DEFAULT_SUBSAMPLE_BITS);
+        interpBicOld = new org.eclipse.imagen.InterpolationBicubic(DEFAULT_SUBSAMPLE_BITS);
         interpBicNew = new InterpolationBicubic(
                 DEFAULT_SUBSAMPLE_BITS, rangeND, false, dataType, dataType, false, DEFAULT_PRECISION_BITS);
 
@@ -241,11 +241,13 @@ public class ComparisonTest extends TestBase {
 
         String interpType = "";
 
-        if (interp instanceof InterpolationBilinear || interp instanceof javax.media.jai.InterpolationBilinear) {
+        if (interp instanceof InterpolationBilinear || interp instanceof org.eclipse.imagen.InterpolationBilinear) {
             interpType = "Bilinear";
-        } else if (interp instanceof InterpolationBicubic || interp instanceof javax.media.jai.InterpolationBicubic) {
+        } else if (interp instanceof InterpolationBicubic
+                || interp instanceof org.eclipse.imagen.InterpolationBicubic) {
             interpType = "Bicubic";
-        } else if (interp instanceof InterpolationNearest || interp instanceof javax.media.jai.InterpolationNearest) {
+        } else if (interp instanceof InterpolationNearest
+                || interp instanceof org.eclipse.imagen.InterpolationNearest) {
             interpType = "Nearest";
         }
         // Total cycles number
@@ -262,7 +264,7 @@ public class ComparisonTest extends TestBase {
 
             // creation of the image with the selected interpolator
             if (old) {
-                imageScale = javax.media.jai.operator.ScaleDescriptor.create(
+                imageScale = org.eclipse.imagen.operator.ScaleDescriptor.create(
                         image, scaleX, scaleY, xTrans, yTrans, interp, hints);
             } else {
                 imageScale = ScaleDescriptor.create(

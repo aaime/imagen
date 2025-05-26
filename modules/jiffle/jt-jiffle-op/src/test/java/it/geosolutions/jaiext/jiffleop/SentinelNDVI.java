@@ -1,6 +1,5 @@
 package it.geosolutions.jaiext.jiffleop;
 
-import com.sun.media.jai.operator.ImageReadDescriptor;
 import it.geosolutions.jaiext.jiffle.JiffleException;
 import java.awt.*;
 import java.awt.image.DataBuffer;
@@ -11,9 +10,9 @@ import java.text.NumberFormat;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
-import javax.media.jai.JAI;
-import javax.media.jai.ParameterBlockJAI;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.ParameterBlockJAI;
+import org.eclipse.imagen.RenderedOp;
 
 public class SentinelNDVI {
 
@@ -55,6 +54,8 @@ public class SentinelNDVI {
     private static RenderedOp readImage(File file) throws IOException {
         FileImageInputStream stream = new FileImageInputStream(file);
         ImageReader reader = ImageIO.getImageReaders(stream).next();
-        return ImageReadDescriptor.create(stream, 0, false, false, false, null, null, null, reader, null);
+        // TODO: reimplement ImageRead and uncomment the following line
+        // return ImageReadDescriptor.create(stream, 0, false, false, false, null, null, null, reader, null);
+        return null;
     }
 }

@@ -17,8 +17,6 @@
 */
 package it.geosolutions.jaiext.scale;
 
-import com.sun.media.jai.util.ImageUtil;
-import com.sun.media.jai.util.Rational;
 import it.geosolutions.jaiext.interpolators.InterpolationBicubic;
 import it.geosolutions.jaiext.interpolators.InterpolationBilinear;
 import it.geosolutions.jaiext.interpolators.InterpolationNearest;
@@ -32,17 +30,19 @@ import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Map;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.GeometricOpImage;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.IntegerSequence;
-import javax.media.jai.Interpolation;
-import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.RenderedOp;
-import javax.media.jai.WarpOpImage;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.GeometricOpImage;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.IntegerSequence;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OpImage;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.RenderedOp;
+import org.eclipse.imagen.WarpOpImage;
+import org.eclipse.imagen.media.util.ImageUtil;
+import org.eclipse.imagen.media.util.Rational;
 import org.huldra.math.BigInt;
 
 /**

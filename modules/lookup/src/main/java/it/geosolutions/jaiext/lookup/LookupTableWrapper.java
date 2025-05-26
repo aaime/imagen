@@ -3,7 +3,7 @@ package it.geosolutions.jaiext.lookup;
 import java.awt.Rectangle;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
-import javax.media.jai.LookupTableJAI;
+import org.eclipse.imagen.LookupTableJAI;
 
 public class LookupTableWrapper extends LookupTable {
 

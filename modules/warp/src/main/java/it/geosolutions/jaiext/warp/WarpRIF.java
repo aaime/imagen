@@ -17,7 +17,6 @@
 */
 package it.geosolutions.jaiext.warp;
 
-import com.sun.media.jai.opimage.RIFUtil;
 import it.geosolutions.jaiext.interpolators.InterpolationBicubic;
 import it.geosolutions.jaiext.interpolators.InterpolationBilinear;
 import it.geosolutions.jaiext.interpolators.InterpolationNearest;
@@ -27,18 +26,19 @@ import java.awt.RenderingHints;
 import java.awt.image.RenderedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.awt.image.renderable.RenderedImageFactory;
-import javax.media.jai.BorderExtender;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.Interpolation;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.ROI;
-import javax.media.jai.Warp;
+import org.eclipse.imagen.BorderExtender;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.Interpolation;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.ROI;
+import org.eclipse.imagen.Warp;
+import org.eclipse.imagen.media.opimage.RIFUtil;
 
 /**
  * A <code>RIF</code> supporting the "Warp" operation in the rendered image layer.
  *
  * @since EA2
- * @see javax.media.jai.operator.WarpDescriptor
+ * @see org.eclipse.imagen.operator.WarpDescriptor
  * @see GeneralWarpOpImage
  */
 public class WarpRIF implements RenderedImageFactory {
@@ -73,14 +73,15 @@ public class WarpRIF implements RenderedImageFactory {
         }
         Range noData = (Range) paramBlock.getObjectParameter(4);
         noData = RangeFactory.convert(noData, source.getSampleModel().getDataType());
-        if (interp instanceof InterpolationNearest || interp instanceof javax.media.jai.InterpolationNearest) {
+        if (interp instanceof InterpolationNearest || interp instanceof org.eclipse.imagen.InterpolationNearest) {
             return new WarpNearestOpImage(source, renderHints, layout, warp, interp, roi, noData, backgroundValues);
-        } else if (interp instanceof InterpolationBilinear || interp instanceof javax.media.jai.InterpolationBilinear) {
+        } else if (interp instanceof InterpolationBilinear
+                || interp instanceof org.eclipse.imagen.InterpolationBilinear) {
             return new WarpBilinearOpImage(
                     source, extender, renderHints, layout, warp, interp, roi, noData, backgroundValues);
         } else if (interp instanceof InterpolationBicubic
-                || interp instanceof javax.media.jai.InterpolationBicubic
-                || interp instanceof javax.media.jai.InterpolationBicubic2) {
+                || interp instanceof org.eclipse.imagen.InterpolationBicubic
+                || interp instanceof org.eclipse.imagen.InterpolationBicubic2) {
             return new WarpBicubicOpImage(
                     source, extender, renderHints, layout, warp, interp, roi, noData, backgroundValues);
         } else {

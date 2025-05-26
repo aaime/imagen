@@ -22,9 +22,9 @@ import java.awt.RenderingHints;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.util.Map;
-import javax.media.jai.ImageLayout;
-import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
+import org.eclipse.imagen.ImageLayout;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.OpImage;
 
 /** An OpImage to translate an image by in integral number of pixels. */
 public final class TranslateIntOpImage extends OpImage {

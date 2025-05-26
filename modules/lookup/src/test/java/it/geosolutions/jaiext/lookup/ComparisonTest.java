@@ -23,10 +23,10 @@ import it.geosolutions.jaiext.range.RangeFactory;
 import it.geosolutions.jaiext.testclasses.TestBase;
 import java.awt.image.DataBuffer;
 import java.awt.image.RenderedImage;
-import javax.media.jai.JAI;
-import javax.media.jai.LookupTableJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
+import org.eclipse.imagen.JAI;
+import org.eclipse.imagen.LookupTableJAI;
+import org.eclipse.imagen.PlanarImage;
+import org.eclipse.imagen.RenderedOp;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -308,7 +308,8 @@ public class ComparisonTest extends TestBase {
             // creation of the image with the selected descriptor
 
             if (old) {
-                imageLookup = javax.media.jai.operator.LookupDescriptor.create(testIMG, (LookupTableJAI) table, null);
+                imageLookup =
+                        org.eclipse.imagen.operator.LookupDescriptor.create(testIMG, (LookupTableJAI) table, null);
             } else {
                 imageLookup = LookupDescriptor.create(
                         testIMG, (LookupTable) table, destinationNoDataValue, null, rangeND, false, null);
